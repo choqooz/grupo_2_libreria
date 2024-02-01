@@ -1,0 +1,67 @@
+:root {
+    --amarillo: #FFBF5D;
+    --azul_oscuro: #2B3D4A;
+    --celeste:#39cccc;
+    --gris_oscuro: #666;
+    --gris_claro: #ECECEA;
+    --Verde: #009B7D;
+
+}
+
+*{
+    padding-left: 5px;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    
+}
+.section-login{
+    margin: 10px;
+    border: solid 1px;
+    width: 500px;
+    padding: 30px;
+}
+.users, .pass{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-left: 35px;
+    
+}
+
+.datos_pers{
+    font-weight: bold;
+    font-size: 25px;
+}
+.users input, .pass input{
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid black;
+    
+}
+.logo_reg{
+    display: flex;
+    margin: auto;
+    width: 100px;
+    flex-wrap: nowrap;
+    padding-bottom: 35px ;
+    background-color: white;
+}
+div{
+    line-height: 30px;
+}
+
+.botones{
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.botones button{
+    border-radius: 35px;
+    width: 100px;
+    background-color: var(--Verde);
+    border:solid var(--azul_oscuro) 1px;
+    
+}

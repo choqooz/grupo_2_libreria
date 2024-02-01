@@ -1,0 +1,72 @@
+* {
+    padding-left: 5px;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    border-radius: 10px;
+
+}
+
+.logo {
+    position: absolute;
+    left: 430px;
+}
+
+
+.main_register {
+    width: 500px;
+    border: solid;
+    padding: 10px;
+}
+
+.logo_reg {
+    width: 85px;
+}
+
+.datos_pers {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+div {
+    line-height: 40px;
+
+}
+
+.terminos_info {
+    font-size: 12px;
+
+}
+
+.prefijo {
+    width: 40px;
+
+}
+
+a {
+    text-decoration: underline;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botones button {
+    padding: 10px;
+}
+
+#name {
+    width: 300px;
+}
+
+#apellido {
+    width: 300px;
+}
+
+#e-mail {
+    width: 325px;
+}
+
+#telefono {
+    width: 265px;
+}
