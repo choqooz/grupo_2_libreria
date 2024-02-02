@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Cuenta</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="/css/general_styles.css" rel="stylesheet" >
-    <link href="css/login_styles.css" rel="stylesheet">
-</head>
+<%- include('partials/head.ejs') %>
 <body>
+    <%- include('partials/header.ejs') %>
     <section class="section-login">
         <img class="logo_reg" src="images/logo_libreria.png" alt="Logo Empresa">
         <form class="form_reg" action="/register" method="POST"> 
@@ -30,6 +23,6 @@
                 <button type="reset">Cancelar</button>
             </div>
     </section>
-    
+    <%- include('partials/footer.ejs') %>
 </body>
 </html>
