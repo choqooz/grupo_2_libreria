@@ -4,58 +4,59 @@
   <body>
     <%- include('partials/header.ejs') %>
 
-    <div class="logo">
-      <img class="logo_reg" src="images/logo_libreria.png" alt="Logo Empresa" />
-    </div>
-
+    <img class="logo_reg" src="images/logo_libreria.png" alt="Logo Empresa" />
+    <h3>DATOS PERSONALES</h3>
     <form class="form_reg" action="/register" method="POST">
-      <div class="datos_pers">DATOS PERSONALES</div>
-      <section class="main_register">
-        <div>
-          <label for="name">Ingresar Nombres</label>
-          <input type="text" name="name" id="name" />
-        </div>
-        <div>
-          <label for="apellido">Ingresar Apellidos</label>
-          <input type="text" name="apellido" id="apellido" />
-        </div>
-        <div>
-          <label for="e-mail">Ingrese E-mail</label>
-          <input type="email" name="e-mail" id="e-mail" />
-        </div>
-        <div>
-          <label for="fecha">Fecha Nacimiento</label>
-          <input type="date" name="fecha" id="fecha" />
-        </div>
-        <div>
-          <label for="codigo">Prefijo</label>
-          <input
-            class="prefijo"
-            type="autocomplete"
-            name="codigo"
-            id="codigo"
-            placeholder="+54"
-          />
-          <label for="telefono">Teléfono</label>
-          <input type="text" name="telefone" id="telefono" />
-        </div>
-        <div class="terminos_info">
-          <label for="informacion"
-            >Quiero recibir información personalizada de la Libreria.</label
-          >
-          <input type="checkbox" name="informacion" checked />
-          <br br="break line" />
-          <label for="terminos"
-            >Términos y condiciones.
-            <a href="#">acepto condiciones y política de cookies</a></label
-          >
-          <input type="checkbox" name="terminos" checked />
-        </div>
-        <div class="botones">
-          <button type="submit">Crear Cuenta</button>
-          <button type="reset">Borrar Datos</button>
-        </div>
-      </section>
+      <label for="name-field" class="name">
+        Nombres
+        <input class="input" name="name" id="name-field" />
+      </label>
+
+      <label for="surname-field" class="surname">
+        Apellidos
+        <input class="input" name="apellido" id="surname-field" />
+      </label>
+
+      <label for="email-field" class="email"
+        >E-mail
+        <input class="input" type="email" name="email" id="email-field" />
+      </label>
+
+      <label for="date-field" class="date"
+        >Fecha Nacimiento
+        <input class="input" type="date" name="date" id="date-field" />
+      </label>
+
+      <label for="prefix-field" class="prefix"
+        >Prefijo
+        <input
+          class="input"
+          type="autocomplete"
+          name="prefix"
+          id="prefix-field"
+          placeholder="+54"
+        />
+      </label>
+
+      <label for="phone-field" class="phone"
+        >Teléfono
+        <input class="input" type="text" name="phone" id="phone-field" />
+      </label>
+
+      <div class="terminos_info">
+        <em> Quiero recibir información personalizada de la Libreria. </em>
+        <input type="checkbox" name="informacion" checked />
+        <br />
+        <em
+          >Términos y condiciones.
+          <a href="#">Acepto condiciones y política de cookies</a>
+        </em>
+        <input type="checkbox" name="terminos" checked />
+      </div>
+      <div class="botones">
+        <input class="input" type="submit" value="Crear Cuenta" / > <input
+        class="input" type="reset" value="Borrar Datos" / >
+      </div>
     </form>
 
     <%- include('partials/footer.ejs') %>
