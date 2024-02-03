@@ -5,9 +5,7 @@ grupo_2_libreria
 
 Colaboradores: 
 1. Miguel Antonio Albornoz: Lic. Comercialización, Magister en Finanzas, 48 años, apasionado por la Economía y los Mercados de Capitales, aficionado a la Programación.          
-2. Guillermo Aprile: 22 años, estudiante de la Universidad Nacional de Jujuy, Encantado con la programacion Web y amando la programación.
-3. Ricardo J. Suarez: 47 años, Lic. en Comerio Internacional, Mg. en Agronegocios.
-4. Emanuel Tejerina: 38 Años, Contador Publico, socio de una empresa de Software, PO en un proyecto ERP, amante de la programacion.-
+2. 
 
 
 
