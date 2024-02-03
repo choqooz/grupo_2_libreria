@@ -133,7 +133,7 @@ header{
 @media (min-width:360px){
     .header__search{
         
-       /* border: red dotted 1px;*/
+       /*border: red dotted 1px;*/
         margin: 6px;
         padding: 0px;
     }
@@ -196,9 +196,13 @@ header{
     }
 }
 
+/*body*/
+body {
+    background-color: rgb(236, 245, 218);
+}
 /*footer*/
 footer{
-    background-color: var(--celeste);
+    background-color: var(--Verde);
 }
 
 .footer_account{
