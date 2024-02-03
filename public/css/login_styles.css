@@ -53,7 +53,7 @@ div{
     line-height: 30px;
 }
 
-.botones{
+.botones{    
     padding-top: 35px;
     display: flex;
     justify-content: space-evenly;
@@ -61,7 +61,6 @@ div{
 }
 
 .botones button{
-    border: red dotted 1px;
     border-radius: 35px;
     width: 100px;
     background-color: var(--Verde);

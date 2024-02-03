@@ -3,7 +3,7 @@
 <%- include('partials/head.ejs') %>
 <body>
     <%- include('partials/header.ejs') %>
-    <section class="section-login">
+    <div class="div-login">
         <img class="logo_reg" src="images/logo_libreria.png" alt="Logo Empresa">
         <form class="form_reg" action="/register" method="POST"> 
            <div class="datos_pers">Accede a tu Cuenta</div>
@@ -22,7 +22,7 @@
                 <button type="submit">Enviar</button>
                 <button type="reset">Cancelar</button>
             </div>
-    </section>
+        </div>
     <%- include('partials/footer.ejs') %>
 </body>
 </html>
