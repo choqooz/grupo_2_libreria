@@ -61,6 +61,7 @@ div{
 }
 
 .botones button{
+    border: red dotted 1px;
     border-radius: 35px;
     width: 100px;
     background-color: var(--Verde);

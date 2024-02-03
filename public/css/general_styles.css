@@ -132,7 +132,6 @@ header{
 }
 @media (min-width:360px){
     .header__search{
-        
        /*border: red dotted 1px;*/
         margin: 6px;
         padding: 0px;
@@ -262,3 +261,4 @@ footer h3 {
 #mail_row{
     font-size: 18px;
 }
+
