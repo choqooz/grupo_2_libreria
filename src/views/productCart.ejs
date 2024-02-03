@@ -4,6 +4,109 @@
     <%- include('partials/head.ejs') %>
   </head>
   <body>
-    <%- include('partials/header.ejs') %> <%- include('partials/footer.ejs') %>
+    <main>
+      <%- include('partials/header.ejs') %>
+
+      <section class="cart-container">
+        <article class="cart-items">
+          <div class="cart-card">
+            <img
+              src="/images/indexImages/producto-demo.png"
+              alt="image prod"
+              srcset=""
+            />
+            <div class="cart-info">
+              <p>Nombre prod</p>
+              <p>Cantidad</p>
+              <p>Precio</p>
+            </div>
+            <br />
+            <button>Continuar comprando</button>
+          </div>
+          <div class="cart-card">
+            <img
+              src="/images/indexImages/producto-demo.png"
+              alt="image prod"
+              srcset=""
+            />
+            <div class="cart-info">
+              <p>Nombre prod</p>
+              <p>Cantidad</p>
+              <p>Precio</p>
+            </div>
+            <br />
+            <button>Continuar comprando</button>
+          </div>
+          <div class="cart-card">
+            <img
+              src="/images/indexImages/producto-demo.png"
+              alt="image prod"
+              srcset=""
+            />
+            <div class="cart-info">
+              <p>Nombre prod</p>
+              <p>Cantidad</p>
+              <p>Precio</p>
+            </div>
+            <br />
+            <button>Continuar comprando</button>
+          </div>
+        </article>
+        <article class="cart-total">
+          <p>Articulos <span>0.00 $</span></p>
+          <p>Articulos <span>0.00 $</span></p>
+          <hr />
+          <p>Total: <span>0.00 $</span></p>
+          <hr />
+          <button>Hacer pedido</button>
+        </article>
+      </section>
+
+      <h3 class="products-title">PRODUCTOS RELACIONADOS</h3>
+      <section class="main_producto">
+        <article>
+          <a href="/productDetail">
+            <img
+              src="/images/indexImages/producto-demo.png"
+              alt="producto-librearia"
+          /></a>
+          <p>nombre art</p>
+          <p>precio</p>
+          <button>Agregar al Carrito</button>
+        </article>
+        <article>
+          <a href="/productDetail">
+            <img
+              src="/images/indexImages/producto-demo.png"
+              alt="producto-librearia"
+          /></a>
+          <p>nombre art</p>
+          <p>precio</p>
+          <button>Agregar al Carrito</button>
+        </article>
+        <article>
+          <a href="/productDetail">
+            <img
+              src="/images/indexImages/producto-demo.png"
+              alt="producto-librearia"
+          /></a>
+          <p>nombre art</p>
+          <p>precio</p>
+          <button>Agregar al Carrito</button>
+        </article>
+        <article>
+          <a href="/productDetail">
+            <img
+              src="/images/indexImages/producto-demo.png"
+              alt="producto-librearia"
+          /></a>
+          <p>nombre art</p>
+          <p>precio</p>
+          <button>Agregar al Carrito</button>
+        </article>
+      </section>
+
+      <%- include('partials/footer.ejs') %>
+    </main>
   </body>
 </html>
