@@ -54,16 +54,9 @@ div{
 }
 
 .botones{    
-    padding-top: 35px;
     display: flex;
     justify-content: space-evenly;
     
 }
 
-.botones button{
-    border-radius: 35px;
-    width: 100px;
-    background-color: var(--Verde);
-    border:solid var(--azul_oscuro) 1px;
-    
-}
+

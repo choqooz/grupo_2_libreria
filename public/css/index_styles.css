@@ -16,7 +16,9 @@
     17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
     25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
-
+main {
+  margin-top: 70px;
+}
 .slider {
   aspect-ratio: 16 / 9;
   width: 50%;
@@ -148,9 +150,11 @@
 .logo_reg {
   width: 200px;
   display: block;
-  margin: 5px auto;
+  padding-top: 35px;
+  margin: 20px auto;
 }
 body {
+  margin-top: 120px;
   padding-bottom: 10px;
 }
 .form_reg {
@@ -223,6 +227,7 @@ body {
   margin: 10px 15px;
   width: 40%;
   text-align: center;
+  
   img {
     width: 100%;
   }

@@ -16,12 +16,20 @@
   color: black;
   font-family: lato;
 }
+
 /*header*/
 header {
   background-color: var(--Verde);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  
+
 }
 
 .header_navbar {
+  margin-bottom: -15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -279,3 +287,4 @@ div {
   background-color: var(--Verde);
   border: solid var(--azul_oscuro) 2px;
 }
+
