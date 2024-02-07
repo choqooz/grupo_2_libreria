@@ -5,7 +5,7 @@ grupo_2_libreria
 
 Colaboradores: 
 1. Miguel Antonio Albornoz: Lic. Comercialización, Magister en Finanzas, 48 años, apasionado por la Economía y los Mercados de Capitales, aficionado a la Programación.          
-2. 
+2. Ezequiel Estrada: 
 
 
 
