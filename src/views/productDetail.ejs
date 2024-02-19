@@ -5,30 +5,32 @@
   <body>
     <main>
       <%- include('partials/header.ejs') %>
-
+      <% if (product) { %>
+       
+      
       <div class="detail-product">
         <div class="images-detail-product">
-          <img src="/images/indexImages/producto-demo.png" alt="nombre prod" />
+          <img src="/images/products/<%= product.image %>" alt="nombre prod" />
           <div class="tiny-images-detail-product">
             <img
-              src="/images/indexImages/producto-demo.png"
+              src="/images/products/<%= product.image %>"
               alt="nombre prod"
             /><img
-              src="/images/indexImages/producto-demo.png"
+              src="/images/products/<%= product.image %>"
               alt="nombre prod"
             /><img
-              src="/images/indexImages/producto-demo.png"
+              src="/images/products/<%= product.image %>"
               alt="nombre prod"
             /><img
-              src="/images/indexImages/producto-demo.png"
+              src="/images/products/<%= product.image %>"
               alt="nombre prod"
             />
           </div>
         </div>
 
         <div class="info-detail-product">
-          <h2 class="info-detail-product-title">TITULO PRODUCTO</h2>
-          <p class="info-detail-product-subtitle">Descripcion producto</p>
+          <h2 class="info-detail-product-title"><%= product.nombre %></h2>
+          <p class="info-detail-product-subtitle"><%= product.descripcion %> producto</p>
           <div class="links">
             <a class="icons" href="https://www.facebook.com/"
               ><svg
@@ -79,16 +81,32 @@
                 /></svg
             ></a>
           </div>
-          <h2 class="info-detail-product-price">Precio: $</h2>
+          <h2 class="info-detail-product-price">Precio: $<%= product.precio %></h2>
+          <h2 class="info-detail-product-price">Color: <%= product.color %></h2>
           <label for="quantity-prods">
             Cantidad de Productos:
             <input type="number" name="quantity-prods" id="quantity-prods" />
           </label>
           <button>Agregar al Carrito</button>
           <p class="info-detail-product-stock">Disponibles:</p>
+          <a
+                href="/products/<%= product.id %>/edit"
+                class="action-button edit"
+                >EDITAR PRODUCTO</a
+              >
+              <form
+                action="/products/<%= product.id %>?_method=DELETE"
+                method="POST"
+              >
+                <button type="submit" class="action-button delete">
+                  ELIMINAR
+                </button>
+              </form>
         </div>
       </div>
-
+      <% }else { %>
+        <h1 class="container">El producto no existe, <a href="/">go back!</a></h1>
+        <% }%>
       <%- include('partials/footer.ejs') %>
     </main>
   </body>

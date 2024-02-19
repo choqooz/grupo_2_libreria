@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "nombre": "Libro de Ficción A",
+    "descripcion": "Una emocionante novela de ficción.",
+    "image": "libro_ficcion_a.jpg",
+    "categoria": "Ficción",
+    "color": [
+      "Azul",
+      "Rojo",
+      "Verde"
+    ],
+    "precio": 29.99
+  },
+  {
+    "id": 2,
+    "nombre": "Libro de No Ficción B",
+    "descripcion": "Un libro informativo y educativo.",
+    "image": "libro_no_ficcion_b.jpg",
+    "categoria": "No Ficción",
+    "color": [
+      "Negro",
+      "Gris",
+      "Blanco"
+    ],
+    "precio": 24.99
+  },
+  {
+    "id": 3,
+    "nombre": "Cuaderno Escolar A4",
+    "descripcion": "Cuaderno de notas para estudiantes.",
+    "image": "cuaderno_a4.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Amarillo",
+      "Azul",
+      "Rojo"
+    ],
+    "precio": 5.99
+  },
+  {
+    "id": 4,
+    "nombre": "Marcadores de Colores",
+    "descripcion": "Juego de marcadores brillantes.",
+    "image": "marcadores_colores.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Naranja",
+      "Verde",
+      "Morado"
+    ],
+    "precio": 8.99
+  },
+  {
+    "id": 5,
+    "nombre": "Libro de Aventuras",
+    "descripcion": "Una emocionante historia de aventuras.",
+    "image": "libro_aventuras.jpg",
+    "categoria": "Ficción",
+    "color": [
+      "Azul",
+      "Verde",
+      "Amarillo"
+    ],
+    "precio": 34.99
+  },
+  {
+    "id": 6,
+    "nombre": "Lápices HB (paquete de 10)",
+    "descripcion": "Lápices para escribir y dibujar.",
+    "image": "lapices_hb.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Amarillo",
+      "Negro"
+    ],
+    "precio": 3.99
+  },
+  {
+    "id": 7,
+    "nombre": "Libro de Historia",
+    "descripcion": "Un recorrido fascinante por la historia.",
+    "image": "libro_historia.jpg",
+    "categoria": "No Ficción",
+    "color": [
+      "Gris",
+      "Blanco",
+      "Negro"
+    ],
+    "precio": 27.99
+  },
+  {
+    "id": 8,
+    "nombre": "Cuaderno de Dibujo",
+    "descripcion": "Perfecto para artistas y dibujantes.",
+    "image": "cuaderno_dibujo.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Azul",
+      "Verde",
+      "Rojo"
+    ],
+    "precio": 9.99
+  },
+  {
+    "id": 9,
+    "nombre": "Plumones de Colores (paquete de 12)",
+    "descripcion": "Amplia gama de colores vibrantes.",
+    "image": "plumones_colores.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Rojo",
+      "Amarillo",
+      "Azul"
+    ],
+    "precio": 12.99
+  },
+  {
+    "id": 10,
+    "nombre": "Libro de Ciencia",
+    "descripcion": "Explorando los misterios del mundo.",
+    "image": "libro_ciencia.jpg",
+    "categoria": "No Ficción",
+    "color": [
+      "Verde",
+      "Azul",
+      "Gris"
+    ],
+    "precio": 32.99
+  },
+  {
+    "id": 11,
+    "nombre": "Bolígrafos (paquete de 6)",
+    "descripcion": "Bolígrafos suaves y de escritura fácil.",
+    "image": "boligrafos.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Negro",
+      "Azul",
+      "Rojo"
+    ],
+    "precio": 6.99
+  },
+  {
+    "id": 12,
+    "nombre": "Libro de Poesía",
+    "descripcion": "Versos inspiradores y emotivos.",
+    "image": "libro_poesia.jpg",
+    "categoria": "Ficción",
+    "color": [
+      "Azul",
+      "Morado",
+      "Blanco"
+    ],
+    "precio": 18.99
+  },
+  {
+    "id": 13,
+    "nombre": "Gomas de Borrar (paquete de 3)",
+    "descripcion": "Gomas de borrar de calidad.",
+    "image": "gomas_borrar.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Blanco"
+    ],
+    "precio": 2.99
+  },
+  {
+    "id": 14,
+    "nombre": "Libro de Cocina",
+    "descripcion": "Recetas deliciosas y consejos culinarios.",
+    "image": "libro_cocina.jpg",
+    "categoria": "No Ficción",
+    "color": [
+      "Rojo",
+      "Naranja",
+      "Amarillo"
+    ],
+    "precio": 22.99
+  },
+  {
+    "id": 15,
+    "nombre": "Set de Escritura Vintage",
+    "descripcion": "Pluma y papel con estilo clásico.",
+    "image": "set_escritura_vintage.jpg",
+    "categoria": "Material Escolar",
+    "color": [
+      "Negro",
+      "Marrón"
+    ],
+    "precio": 15.99
+  },
+  {
+    "id": 1708296979966,
+    "nombre": "ksdhjshf",
+    "precio": 100,
+    "categoria": "kfjksfh",
+    "descripcion": "hskjdhsjdh",
+    "imagen": "default-img.png"
+  },
+  {
+    "id": 1708297933968,
+    "nombre": "LJKAÑWDA",
+    "precio": 10,
+    "categoria": "SDASD",
+    "descripcion": "LASJDÑKASJDÑK",
+    "image": "1708297933934_img.jpg"
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "firstname": "Juan",
+    "lastname": "Pérez",
+    "email": "juan.perez@example.com",
+    "password": "contraseña123",
+    "category": "Cliente",
+    "image": "juan_perez.jpg"
+  },
+  {
+    "id": 2,
+    "firstname": "Ana",
+    "lastname": "Gómez",
+    "email": "ana.gomez@example.com",
+    "password": "clave456",
+    "category": "Cliente",
+    "image": "ana_gomez.jpg"
+  },
+  {
+    "id": 3,
+    "firstname": "Carlos",
+    "lastname": "Rodríguez",
+    "email": "carlos.rodriguez@example.com",
+    "password": "p@ssw0rd",
+    "category": "Admin",
+    "image": "carlos_rodriguez.jpg"
+  },
+  {
+    "id": 4,
+    "firstname": "Laura",
+    "lastname": "López",
+    "email": "laura.lopez@example.com",
+    "password": "secret123",
+    "category": "Cliente",
+    "image": "laura_lopez.jpg"
+  },
+  {
+    "id": 5,
+    "firstname": "Miguel",
+    "lastname": "Fernández",
+    "email": "miguel.fernandez@example.com",
+    "password": "securepwd",
+    "category": "Cliente",
+    "image": "miguel_fernandez.jpg"
+  },
+  {
+    "id": 6,
+    "firstname": "Isabel",
+    "lastname": "Martínez",
+    "email": "isabel.martinez@example.com",
+    "password": "12345pass",
+    "category": "Cliente",
+    "image": "isabel_martinez.jpg"
+  },
+  {
+    "id": 7,
+    "firstname": "David",
+    "lastname": "Sánchez",
+    "email": "david.sanchez@example.com",
+    "password": "davidpass",
+    "category": "Cliente",
+    "image": "david_sanchez.jpg"
+  },
+  {
+    "id": 8,
+    "firstname": "Elena",
+    "lastname": "Gutiérrez",
+    "email": "elena.gutierrez@example.com",
+    "password": "elena_pwd",
+    "category": "Cliente",
+    "image": "elena_gutierrez.jpg"
+  },
+  {
+    "id": 9,
+    "firstname": "Alejandro",
+    "lastname": "Hernández",
+    "email": "alejandro.hernandez@example.com",
+    "password": "pass123",
+    "category": "Cliente",
+    "image": "alejandro_hernandez.jpg"
+  },
+  {
+    "id": 10,
+    "firstname": "Sara",
+    "lastname": "Ortega",
+    "email": "sara.ortega@example.com",
+    "password": "ortega_pass",
+    "category": "Cliente",
+    "image": "sara_ortega.jpg"
+  },
+  {
+    "id": 11,
+    "firstname": "Roberto",
+    "lastname": "Jiménez",
+    "email": "roberto.jimenez@example.com",
+    "password": "robpass",
+    "category": "Cliente",
+    "image": "roberto_jimenez.jpg"
+  },
+  {
+    "id": 12,
+    "firstname": "María",
+    "lastname": "Ramírez",
+    "email": "maria.ramirez@example.com",
+    "password": "maria_pass",
+    "category": "Admin",
+    "image": "maria_ramirez.jpg"
+  },
+  {
+    "id": 13,
+    "firstname": "Javier",
+    "lastname": "Santos",
+    "email": "javier.santos@example.com",
+    "password": "javierpass",
+    "category": "Cliente",
+    "image": "javier_santos.jpg"
+  },
+  {
+    "id": 14,
+    "firstname": "Natalia",
+    "lastname": "Vega",
+    "email": "natalia.vega@example.com",
+    "password": "nataliapwd",
+    "category": "Cliente",
+    "image": "natalia_vega.jpg"
+  },
+  {
+    "id": 15,
+    "firstname": "Ricardo",
+    "lastname": "Fuentes",
+    "email": "ricardo.fuentes@example.com",
+    "password": "ricardopass",
+    "category": "Cliente",
+    "image": "ricardo_fuentes.jpg"
+  }
+]

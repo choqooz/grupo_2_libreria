@@ -5,12 +5,12 @@
   <body>
     <%- include('partials/header.ejs') %>
 
-    <form action="/products/create" method="POST" class="container">
-      <label for="name">Nombre del producto:</label>
+    <form action="/products/" method="POST" class="container" enctype="multipart/form-data">
+      <label for="nombre">Nombre del producto:</label>
       <input
         type="text"
-        id="name"
-        name="name"
+        id="nombre"
+        name="nombre"
         placeholder="Ej: Carpeta Husares"
       />
       <label for="descripcion">Descripcion:</label>
