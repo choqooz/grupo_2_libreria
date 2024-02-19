@@ -80,7 +80,7 @@
   width: 230px;
 }
 
-.container { 
+.container {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -153,10 +153,7 @@
   padding-top: 35px;
   margin: 20px auto;
 }
-body {
-  margin-top: 120px;
-  padding-bottom: 10px;
-}
+
 .form_reg {
   padding: 10px;
   border: 1px solid hsl(0deg 0% 50%);
@@ -227,7 +224,7 @@ body {
   margin: 10px 15px;
   width: 40%;
   text-align: center;
-  
+
   img {
     width: 100%;
   }
@@ -245,6 +242,7 @@ body {
   margin: 10px 15px;
   border: 1px solid black;
   border-radius: 8px;
+  padding: 1em;
   .info-detail-product-title {
     text-align: center;
     margin: 30px auto;
@@ -323,44 +321,43 @@ body {
     width: 70%;
   }
 
-    .cart-card {
-      text-align: center;
-      margin: 1em;
-      padding: 1em 0;
-      img {
-        width: 20%;
-        vertical-align: middle; /* Alinea verticalmente con el texto */
-      }
-      .cart-info {
-        display: inline-block; /* Convertido a un elemento en línea */
-        vertical-align: middle; /* Alinea verticalmente con la imagen */
-      }
+  .cart-card {
+    text-align: center;
+    margin: 1em;
+    padding: 1em 0;
+    img {
+      width: 20%;
+      vertical-align: middle; /* Alinea verticalmente con el texto */
+    }
+    .cart-info {
+      display: inline-block; /* Convertido a un elemento en línea */
+      vertical-align: middle; /* Alinea verticalmente con la imagen */
     }
   }
+}
 
-  .cart-total {
-    width: 30%;
-    padding: 1em;
+.cart-total {
+  width: 30%;
+  padding: 1em;
+  display: flex;
+  flex-flow: column wrap;
+  p {
     display: flex;
-    flex-flow: column wrap;
-    p {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5em;
-    }
-
-    hr {
-      margin: 0.5em 0;
-    }
-    span {
-      max-width: 60%; /* Puedes ajustar el valor según sea necesario */
-      text-align: right;
-    }
-    button {
-      padding: 7px;
-    }
+    justify-content: space-between;
+    margin-bottom: 0.5em;
   }
 
+  hr {
+    margin: 0.5em 0;
+  }
+  span {
+    max-width: 60%; /* Puedes ajustar el valor según sea necesario */
+    text-align: right;
+  }
+  button {
+    padding: 7px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .cart-container {
