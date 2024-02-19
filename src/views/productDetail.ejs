@@ -4,10 +4,8 @@
 
   <body>
     <main>
-      <%- include('partials/header.ejs') %>
-      <% if (product) { %>
-       
-      
+      <%- include('partials/header.ejs') %> <% if (product) { %>
+
       <div class="detail-product">
         <div class="images-detail-product">
           <img src="/images/products/<%= product.image %>" alt="nombre prod" />
@@ -30,7 +28,9 @@
 
         <div class="info-detail-product">
           <h2 class="info-detail-product-title"><%= product.nombre %></h2>
-          <p class="info-detail-product-subtitle"><%= product.descripcion %> producto</p>
+          <p class="info-detail-product-subtitle">
+            <%= product.descripcion %> producto
+          </p>
           <div class="links">
             <a class="icons" href="https://www.facebook.com/"
               ><svg
@@ -81,7 +81,9 @@
                 /></svg
             ></a>
           </div>
-          <h2 class="info-detail-product-price">Precio: $<%= product.precio %></h2>
+          <h2 class="info-detail-product-price">
+            Precio: $<%= product.precio %>
+          </h2>
           <h2 class="info-detail-product-price">Color: <%= product.color %></h2>
           <label for="quantity-prods">
             Cantidad de Productos:
@@ -89,25 +91,27 @@
           </label>
           <button>Agregar al Carrito</button>
           <p class="info-detail-product-stock">Disponibles:</p>
-          <a
-                href="/products/<%= product.id %>/edit"
-                class="action-button edit"
-                >EDITAR PRODUCTO</a
-              >
-              <form
-                action="/products/<%= product.id %>?_method=DELETE"
-                method="POST"
-              >
-                <button type="submit" class="action-button delete">
-                  ELIMINAR
-                </button>
-              </form>
+
+          <div class="botones-edit-delete">
+            <a href="/products/<%= product.id %>/edit"
+              ><button type="submit" class="action-button edit">
+                EDITAR PRODUCTO
+              </button></a
+            >
+            <form
+              action="/products/<%= product.id %>?_method=DELETE"
+              method="POST"
+            >
+              <button type="submit" class="action-button delete">
+                ELIMINAR
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       <% }else { %>
-        <h1 class="container">El producto no existe, <a href="/">go back!</a></h1>
-        <% }%>
-      <%- include('partials/footer.ejs') %>
+      <h1 class="container">El producto no existe, <a href="/">go back!</a></h1>
+      <% }%> <%- include('partials/footer.ejs') %>
     </main>
   </body>
 </html>

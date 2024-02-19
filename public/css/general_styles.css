@@ -99,6 +99,7 @@ header {
   justify-content: center;
   align-items: center;
   padding-top: 30px;
+  text-align: center;
 }
 
 .header__search__links ul li a:hover {
@@ -200,6 +201,7 @@ footer h3 {
   align-items: center;
   text-align: left;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .footer_subscription div {
