@@ -199,11 +199,12 @@
     "imagen": "default-img.png"
   },
   {
-    "id": 1708297933968,
-    "nombre": "LJKAÑWDA",
-    "precio": 10,
-    "categoria": "SDASD",
-    "descripcion": "LASJDÑKASJDÑK",
-    "image": "1708297933934_img.jpg"
+    "id": 1708388578727,
+    "nombre": "Test",
+    "precio": "15000",
+    "categoria": "test",
+    "descripcion": "test",
+    "color": "test",
+    "image": "1708388595372_img.jpg"
   }
 ]
