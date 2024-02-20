@@ -3,14 +3,10 @@
     "id": 1,
     "nombre": "Libro de Ficción A",
     "descripcion": "Una emocionante novela de ficción.",
-    "image": "libro_ficcion_a.jpg",
+    "image": "1708389145246_img.jpg",
     "categoria": "Ficción",
-    "color": [
-      "Azul",
-      "Rojo",
-      "Verde"
-    ],
-    "precio": 29.99
+    "color": "Azul,Rojo,Verde",
+    "precio": "29.99"
   },
   {
     "id": 2,
