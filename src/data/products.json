@@ -1,206 +1,128 @@
 [
   {
     "id": 1,
-    "nombre": "Libro de Ficción A",
+    "nombre": "Libro de Ficción \"El Marciano\"",
     "descripcion": "Una emocionante novela de ficción.",
-    "image": "1708389145246_img.jpg",
+    "image": "1708472438343_img.jpg",
     "categoria": "Ficción",
     "color": "Azul,Rojo,Verde",
     "precio": "29.99"
   },
   {
     "id": 2,
-    "nombre": "Libro de No Ficción B",
-    "descripcion": "Un libro informativo y educativo.",
-    "image": "libro_no_ficcion_b.jpg",
+    "nombre": "Libro  \"Steve Jobs\"",
+    "descripcion": "Un libro informativo y educativo spbre la vida de Steve Jobs",
+    "image": "1708473019070_img",
     "categoria": "No Ficción",
-    "color": [
-      "Negro",
-      "Gris",
-      "Blanco"
-    ],
-    "precio": 24.99
+    "color": "Negro,Gris,Blanco",
+    "precio": "24.99"
   },
   {
     "id": 3,
     "nombre": "Cuaderno Escolar A4",
     "descripcion": "Cuaderno de notas para estudiantes.",
-    "image": "cuaderno_a4.jpg",
+    "image": "1708473338634_img.jpg",
     "categoria": "Material Escolar",
-    "color": [
-      "Amarillo",
-      "Azul",
-      "Rojo"
-    ],
-    "precio": 5.99
+    "color": "Verde,Azul,Rojo,Negro",
+    "precio": "5.99"
   },
   {
     "id": 4,
     "nombre": "Marcadores de Colores",
     "descripcion": "Juego de marcadores brillantes.",
-    "image": "marcadores_colores.jpg",
+    "image": "1708473488176_img.jpg",
     "categoria": "Material Escolar",
-    "color": [
-      "Naranja",
-      "Verde",
-      "Morado"
-    ],
-    "precio": 8.99
+    "color": "Varios",
+    "precio": "8.99"
   },
   {
     "id": 5,
-    "nombre": "Libro de Aventuras",
+    "nombre": "Libro \"Viaje al Centro de la Tierra\"",
     "descripcion": "Una emocionante historia de aventuras.",
-    "image": "libro_aventuras.jpg",
+    "image": "1708473664216_img.jpg",
     "categoria": "Ficción",
-    "color": [
-      "Azul",
-      "Verde",
-      "Amarillo"
-    ],
-    "precio": 34.99
+    "color": "Varios",
+    "precio": "34.99"
   },
   {
     "id": 6,
     "nombre": "Lápices HB (paquete de 10)",
     "descripcion": "Lápices para escribir y dibujar.",
-    "image": "lapices_hb.jpg",
+    "image": "1708473904058_img.jpeg",
     "categoria": "Material Escolar",
-    "color": [
-      "Amarillo",
-      "Negro"
-    ],
-    "precio": 3.99
+    "color": "Varios",
+    "precio": "3.99"
   },
   {
     "id": 7,
-    "nombre": "Libro de Historia",
+    "nombre": "Libro \"Breve Historia de los Argentinos\"",
     "descripcion": "Un recorrido fascinante por la historia.",
-    "image": "libro_historia.jpg",
+    "image": "1708474320123_img.jpeg",
     "categoria": "No Ficción",
-    "color": [
-      "Gris",
-      "Blanco",
-      "Negro"
-    ],
-    "precio": 27.99
+    "color": "Unico",
+    "precio": "39.99"
   },
   {
     "id": 8,
     "nombre": "Cuaderno de Dibujo",
-    "descripcion": "Perfecto para artistas y dibujantes.",
-    "image": "cuaderno_dibujo.jpg",
+    "descripcion": "Perfecto para niños menores de 4 años",
+    "image": "1708474756760_img.png",
     "categoria": "Material Escolar",
-    "color": [
-      "Azul",
-      "Verde",
-      "Rojo"
-    ],
-    "precio": 9.99
+    "color": "Varios",
+    "precio": "9.99"
   },
   {
     "id": 9,
-    "nombre": "Plumones de Colores (paquete de 12)",
-    "descripcion": "Amplia gama de colores vibrantes.",
-    "image": "plumones_colores.jpg",
-    "categoria": "Material Escolar",
-    "color": [
-      "Rojo",
-      "Amarillo",
-      "Azul"
-    ],
-    "precio": 12.99
+    "nombre": "Libro de Ciencia",
+    "descripcion": "Explorando el mundo de la ciencia y la tecnología",
+    "image": "1708476631144_img.jpg",
+    "categoria": "No Ficción",
+    "color": "Unico",
+    "precio": "32.99"
   },
   {
     "id": 10,
-    "nombre": "Libro de Ciencia",
-    "descripcion": "Explorando los misterios del mundo.",
-    "image": "libro_ciencia.jpg",
-    "categoria": "No Ficción",
-    "color": [
-      "Verde",
-      "Azul",
-      "Gris"
-    ],
-    "precio": 32.99
+    "nombre": "Bolígrafos (paquete de 6)",
+    "descripcion": "Bolígrafos suaves y de escritura fácil.",
+    "image": "1708476996120_img.jpeg",
+    "categoria": "Material Escolar",
+    "color": "Negro,Azul,Rojo",
+    "precio": "6.99"
   },
   {
     "id": 11,
-    "nombre": "Bolígrafos (paquete de 6)",
-    "descripcion": "Bolígrafos suaves y de escritura fácil.",
-    "image": "boligrafos.jpg",
-    "categoria": "Material Escolar",
-    "color": [
-      "Negro",
-      "Azul",
-      "Rojo"
-    ],
-    "precio": 6.99
+    "nombre": "Libro de Poesía \"20 Poemas de Amor y una Canción Desesperada\"",
+    "descripcion": "Versos inspiradores y emotivos del gran Pablo Neruda ",
+    "image": "1708476846243_img.jpg",
+    "categoria": "Literatura-Poesía",
+    "color": "Unico",
+    "precio": "18.99"
   },
   {
     "id": 12,
-    "nombre": "Libro de Poesía",
-    "descripcion": "Versos inspiradores y emotivos.",
-    "image": "libro_poesia.jpg",
-    "categoria": "Ficción",
-    "color": [
-      "Azul",
-      "Morado",
-      "Blanco"
-    ],
-    "precio": 18.99
+    "nombre": "Gomas de Borrar (paquete de 3)",
+    "descripcion": "Gomas de borrar de calidad.",
+    "image": "1708477138694_img.jpg",
+    "categoria": "Material Escolar",
+    "color": "Blanco",
+    "precio": "2.99"
   },
   {
     "id": 13,
-    "nombre": "Gomas de Borrar (paquete de 3)",
-    "descripcion": "Gomas de borrar de calidad.",
-    "image": "gomas_borrar.jpg",
-    "categoria": "Material Escolar",
-    "color": [
-      "Blanco"
-    ],
-    "precio": 2.99
+    "nombre": "Set de Geometría x 4 piezas",
+    "descripcion": "Dos Escuadras, una Regla y un Transportador",
+    "image": "1708477370679_img.jpg",
+    "categoria": "Útiles Escolares",
+    "color": "Verde Neón ",
+    "precio": "4.99"
   },
   {
     "id": 14,
-    "nombre": "Libro de Cocina",
-    "descripcion": "Recetas deliciosas y consejos culinarios.",
-    "image": "libro_cocina.jpg",
-    "categoria": "No Ficción",
-    "color": [
-      "Rojo",
-      "Naranja",
-      "Amarillo"
-    ],
-    "precio": 22.99
-  },
-  {
-    "id": 15,
-    "nombre": "Set de Escritura Vintage",
-    "descripcion": "Pluma y papel con estilo clásico.",
-    "image": "set_escritura_vintage.jpg",
+    "nombre": "Set de150 piezas de CRAYON",
+    "descripcion": "Piezas de diferentes colores para divertirse pintando.",
+    "image": "1708477658621_img.jpeg",
     "categoria": "Material Escolar",
-    "color": [
-      "Negro",
-      "Marrón"
-    ],
-    "precio": 15.99
-  },
-  {
-    "id": 1708296979966,
-    "nombre": "ksdhjshf",
-    "precio": 100,
-    "categoria": "kfjksfh",
-    "descripcion": "hskjdhsjdh",
-    "imagen": "default-img.png"
-  },
-  {
-    "id": 1708388578727,
-    "nombre": "Test",
-    "precio": "15000",
-    "categoria": "test",
-    "descripcion": "test",
-    "color": "test",
-    "image": "1708388595372_img.jpg"
+    "color": "Varios",
+    "precio": "15.99"
   }
 ]
