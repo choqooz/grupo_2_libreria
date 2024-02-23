@@ -6,52 +6,132 @@
 
     <img class="logo_reg" src="images/logo_libreria.png" alt="Logo Empresa" />
     <h3 class="products-title">DATOS PERSONALES</h3>
-    <form class="form_reg" action="/register" method="POST">
+
+    <form
+      class="form_reg"
+      action="/users/register"
+      method="POST"
+      enctype="multipart/form-data"
+    >
       <label for="name-field" class="name">
         Nombres
-        <input class="input" name="name" id="name-field" />
+        <input
+          class="input <%= locals.errors && errors.name ? 'input-error' : null %>"
+          name="name"
+          id="name-field"
+          value="<%= locals.old ? old.name : null %>"
+        />
+        <% if (locals.errors && errors.name) { %>
+        <p class="error-message"><%= errors.name.msg %></p>
+        <% } %>
       </label>
 
       <label for="surname-field" class="surname">
         Apellidos
-        <input class="input" name="apellido" id="surname-field" />
-      </label>
-
-      <label for="email-field" class="email"
-        >E-mail
-        <input class="input" type="email" name="email" id="email-field" />
-      </label>
-
-      <label for="date-field" class="date"
-        >Fecha Nacimiento
-        <input class="input" type="date" name="date" id="date-field" />
-      </label>
-
-      <label for="prefix-field" class="prefix"
-        >Prefijo
         <input
-          class="input"
+          class="input <%= locals.errors && errors.surname ? 'input-error' : null %>"
+          name="surname"
+          id="surname-field"
+          value="<%= locals.old ? old.surname : null %>"
+        />
+        <% if (locals.errors && errors.surname) { %>
+        <p class="error-message"><%= errors.surname.msg %></p>
+        <% } %>
+      </label>
+
+      <label for="email-field" class="email">
+        E-mail
+        <input
+          class="input <%= locals.errors && errors.email ? 'input-error' : null %>"
+          type="email"
+          name="email"
+          id="email-field"
+          value="<%= locals.old ? old.email : null %>"
+        />
+        <% if (locals.errors && errors.email) { %>
+        <p class="error-message"><%= errors.email.msg %></p>
+        <% } %>
+      </label>
+
+      <label for="date-field" class="date">
+        Fecha Nacimiento
+        <input
+          class="input <%= locals.errors && errors.date ? 'input-error' : null %>"
+          type="date"
+          name="date"
+          id="date-field"
+          value="<%= locals.old ? old.date : null %>"
+        />
+        <% if (locals.errors && errors.date) { %>
+        <p class="error-message"><%= errors.date.msg %></p>
+        <% } %>
+      </label>
+
+      <label for="prefix-field" class="prefix">
+        Prefijo
+        <input
+          class="input <%= locals.errors && errors.prefix ? 'input-error' : null %>"
           type="autocomplete"
           name="prefix"
           id="prefix-field"
           placeholder="+54"
+          value="<%= locals.old ? old.prefix : null %>"
         />
+        <% if (locals.errors && errors.prefix) { %>
+        <p class="error-message"><%= errors.prefix.msg %></p>
+        <% } %>
       </label>
 
-      <label for="phone-field" class="phone"
-        >Teléfono
-        <input class="input" type="text" name="phone" id="phone-field" />
+      <label for="phone-field" class="phone">
+        Teléfono
+        <input
+          class="input <%= locals.errors && errors.phone ? 'input-error' : null %>"
+          type="text"
+          name="phone"
+          id="phone-field"
+          value="<%= locals.old ? old.phone : null %>"
+        />
+        <% if (locals.errors && errors.phone) { %>
+        <p class="error-message"><%= errors.phone.msg %></p>
+        <% } %>
+      </label>
+
+      <!-- Campo para subir imagen -->
+      <label for="avatar-field" class="avatar">
+        Imagen de Perfil
+        <br />
+        <label class="file-label">
+          Elegir archivo <input type="file" name="avatar" id="avatar-field" " />
+        </label>
+        <% if (locals.errors && errors.avatar) { %>
+        <p class="error-message"><%= errors.avatar.msg %></p>
+        <% } %>
+      </label>
+
+      <!-- Campo para seleccionar la categoría -->
+      <label for="category-field" class="category">
+        Categoría
+        <select class="input" name="category" id="category-field">
+          <option value="admin">Admin</option>
+          <option value="cliente">Cliente</option>
+        </select>
+        <% if (locals.errors && errors.category) { %>
+        <p class="error-message"><%= errors.category.msg %></p>
+        <% } %>
       </label>
 
       <div class="terminos_info">
         <em> Quiero recibir información personalizada de la Libreria. </em>
-        <input type="checkbox" name="informacion" checked />
+        <input type="checkbox" name="information" checked />
         <br />
         <em
           >Términos y condiciones.
           <a href="#">Acepto condiciones y política de cookies</a>
         </em>
-        <input type="checkbox" name="terminos" checked />
+        <input type="checkbox" name="terms" checked />
+        <% if (locals.errors && errors.terms) { %>
+        <p class="error-message"><%= errors.terms.msg %></p>
+        <% } %>
       </div>
       <div class="botones">
         <input class="input" type="submit" value="Crear Cuenta" / > <input

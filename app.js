@@ -5,6 +5,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const productsRouter = require("./src/routes/product.js");
 const mainRouter = require("./src/routes/main.js");
+const usersRouter = require("./src/routes/users.js");
 
 const port = 3005;
 
@@ -20,6 +21,7 @@ app.use(express.static(rute));
 
 app.use("/", mainRouter);
 app.use("/products", productsRouter);
+app.use("/users", usersRouter);
 
 app.listen(port, () => {
   console.log(`Nuestra app corre en http://localhost:${port}`);
