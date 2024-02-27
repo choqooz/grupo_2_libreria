@@ -4,7 +4,7 @@
   <body>
     <%- include('partials/header.ejs') %>
 
-    <img class="logo_reg" src="images/logo_libreria.png" alt="Logo Empresa" />
+    <img class="logo_reg" src="/images/logo_libreria.png" alt="Logo Empresa" />
     <h3 class="products-title">DATOS PERSONALES</h3>
 
     <form
@@ -93,6 +93,20 @@
         />
         <% if (locals.errors && errors.phone) { %>
         <p class="error-message"><%= errors.phone.msg %></p>
+        <% } %>
+      </label>
+
+      <label for="password-field" class="phone">
+        Password
+        <input
+          class="input <%= locals.errors && errors.password ? 'input-error' : null %>"
+          type="password"
+          name="password"
+          id="password-field"
+          value="<%= locals.old ? old.password : null %>"
+        />
+        <% if (locals.errors && errors.password) { %>
+        <p class="error-message"><%= errors.password.msg %></p>
         <% } %>
       </label>
 

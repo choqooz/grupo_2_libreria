@@ -9,6 +9,7 @@ const validations = [
   body("phone")
     .isMobilePhone()
     .withMessage("Ingresa un número de teléfono válido"),
+  body("password").notEmpty().withMessage("La contraseña es obligatoria"),
   body("avatar").custom((value, { req }) => {
     if (!req.file) {
       throw new Error("El avatar es obligatorio");
