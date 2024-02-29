@@ -25,8 +25,23 @@
     </section>
 
     <section class="header__buy">
-      <i class="fa-solid fa-right-to-bracket"></i>
-      <a href=""><i class="fas fa-shopping-cart"></i></a>
+      <% if (locals.isLogged) { %>
+      <img
+        src="/images/users/<%= locals.userLogged.avatar %>"
+        alt="User Avatar"
+        width="40"
+        height="40"
+      />
+      <p>Hola <%= locals.userLogged.name %> <%= locals.userLogged.surname %></p>
+      <a href="/users/profile">Profile</a>
+      <a href="/users/logout">Logout</a>
+      <% } else { %>
+
+      <div>
+        <a href="/users/login">Login</a>
+        <a href="/users/register">Register</a>
+      </div>
+      <% } %>
     </section>
   </section>
 </header>

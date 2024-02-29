@@ -6,13 +6,7 @@ const path = require("path");
 
 const controller = {
   index: (req, res) => {
-    res.render("index.ejs",{pageTitle: "Página de Incio"});
-  },
-  login: (req, res) => {
-    res.render("login.ejs",{pageTitle: "Login"});
-  },
-  register: (req, res) => {
-    res.render("register.ejs",{pageTitle: "Formulario de Registro"});
+    res.render("index.ejs", { pageTitle: "Página de Incio" });
   },
 };
 

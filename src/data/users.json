@@ -200,5 +200,19 @@
   "information": "on",
   "terms": "on",
   "avatar": "1708994559652_img.png"
+ },
+ {
+  "id": 1709162981867,
+  "name": "eze",
+  "surname": "estrada",
+  "email": "choqooz@gmail.com",
+  "date": "1998-01-02",
+  "prefix": "54",
+  "phone": "3885720444",
+  "password": "$2a$10$q5/NPacfYcMurkidz/ktTO26WTDBFdybJ9wHbVqY2TPfGwT3MnZLe",
+  "category": "admin",
+  "information": "on",
+  "terms": "on",
+  "avatar": "1709162981776_img.png"
  }
 ]

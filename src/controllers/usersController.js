@@ -13,6 +13,39 @@ const controller = {
   login: (req, res) => {
     res.render("login.ejs", { pageTitle: "Login" });
   },
+  processLogin: (req, res) => {
+    let userToLogin = User.findByField("email", req.body.email);
+
+    if (userToLogin) {
+      let isOkThePassword = bcrypt.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+
+      if (isOkThePassword) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+
+        if (req.body.remember_me === "on") {
+          res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 2 });
+        }
+
+        return res.redirect("/users/profile");
+      }
+
+      return res.render("login.ejs", {
+        errors: { email: { msg: "Credenciales invalidas" } },
+        old: req.body,
+        pageTitle: "Formulario de Login",
+      });
+    }
+
+    return res.render("login.ejs", {
+      errors: { email: { msg: "Email invalido" } },
+      old: req.body,
+      pageTitle: "Formulario de Login",
+    });
+  },
   register: (req, res) => {
     res.render("register.ejs", { pageTitle: "Formulario de Registro" });
   },
@@ -29,9 +62,7 @@ const controller = {
 
     let userInDB = User.findByField("email", req.body.email);
 
-    console.log("userindb: ", userInDB);
-
-    if (userInDB.length > 0) {
+    if (userInDB) {
       return res.render("register.ejs", {
         errors: { email: { msg: "Este email ya está registrado" } },
         old: req.body,
@@ -47,6 +78,18 @@ const controller = {
 
     User.create(newUser);
     return res.render("login.ejs", { pageTitle: "Formulario de Registro" });
+  },
+  profile: (req, res) => {
+    console.log(req.cookies.email);
+    return res.render("usersProfile.ejs", {
+      user: req.session.userLogged,
+      pageTitle: "Perfil de usuario",
+    });
+  },
+  logout: (req, res) => {
+    res.clearCookie("email");
+    req.session.destroy();
+    res.redirect("/");
   },
 };
 

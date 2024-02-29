@@ -21,7 +21,7 @@ const User = {
     return userFound;
   },
   findByField: (field, text) => {
-    let userFound = users.filter((user) => user[field] === text);
+    let userFound = users.find((user) => user[field] === text);
     return userFound;
   },
   delete: (id) => {
