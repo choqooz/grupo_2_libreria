@@ -41,7 +41,7 @@ const controller = {
     }
 
     return res.render("login.ejs", {
-      errors: { email: { msg: "Email invalido" } },
+      errors: { email: { msg: "Credenciales invalido" } },
       old: req.body,
       pageTitle: "Formulario de Login",
     });
@@ -80,7 +80,6 @@ const controller = {
     return res.render("login.ejs", { pageTitle: "Formulario de Registro" });
   },
   profile: (req, res) => {
-    console.log(req.cookies.email);
     return res.render("usersProfile.ejs", {
       user: req.session.userLogged,
       pageTitle: "Perfil de usuario",

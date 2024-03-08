@@ -5,6 +5,10 @@ const usersFilePath = path.join(__dirname, "../data/users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const User = {
+  filename: path.join(__dirname, "../data/users.json"),
+  getData: function () {
+    return JSON.parse(fs.readFileSync(this.filename, "utf-8"));
+  },
   create: (userData) => {
     let newUser = {
       id: Date.now(),
@@ -21,7 +25,7 @@ const User = {
     return userFound;
   },
   findByField: (field, text) => {
-    let userFound = users.find((user) => user[field] === text);
+    let userFound = User.getData().find((user) => user[field] === text);
     return userFound;
   },
   delete: (id) => {
