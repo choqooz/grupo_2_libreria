@@ -214,5 +214,19 @@
   "information": "on",
   "terms": "on",
   "avatar": "1709162981776_img.png"
+ },
+ {
+  "id": 1710280510455,
+  "name": "gervacio",
+  "surname": "nuñez",
+  "email": "gerva@dh.com",
+  "date": "1980-10-02",
+  "prefix": "+5411",
+  "phone": "1130558812",
+  "password": "$2a$10$bFf3ebsiXzLVotKhxRMHTeS/YiruZVyqALb90R0cG7K3BiMN518jq",
+  "category": "admin",
+  "information": "on",
+  "terms": "on",
+  "avatar": "1710280510328_img.jpg"
  }
 ]
