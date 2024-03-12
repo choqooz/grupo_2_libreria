@@ -171,6 +171,33 @@
   gap: 8px;
 }
 
+.form_log {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column wrap;
+  width: 60%;
+  margin: 10px auto;
+  gap: 8px;
+  .input {
+    width: 25%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .users,
+  .pass {
+    input {
+      width: 350px;
+      height: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+  }
+}
+
 .input {
   display: block;
   width: 100%;
