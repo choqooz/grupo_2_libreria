@@ -73,6 +73,8 @@
   display: flex;
   width: 260px;
   padding: 3px;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .main_popular_products img {
@@ -118,8 +120,8 @@
     flex: 1 0 calc(25% - 20px);
   }
   img {
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: auto;
     border: 1px solid #cccccc00;
     border-radius: 8px;
     margin: 10px;
@@ -148,6 +150,11 @@
       flex: 1 0 calc(100% - 20px); /* Ajustar para 1 artículo por fila */
     }
   }
+}
+.producto-destacado-text {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
 }
 /* -------------FIN------------- PRODUCTOS /products */
 
@@ -220,11 +227,11 @@
 
 /* ... Otros estilos ... */
 
-.avatar,
+/* .avatar,
 .category {
   flex-grow: 1;
   flex-basis: 48%;
-}
+} */
 
 .avatar {
   text-align: center;
