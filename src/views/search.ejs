@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs') %>
+
+  <body>
+    <%- include('partials/header.ejs') %>
+    <h3 class="products-title">PRODUCTOS</h3>
+    <section class="main_producto">
+      <% results.forEach((producto) => { %>
+      <article>
+        <a href="/products/<%= producto.id %>">
+          <img
+            src="/images/products/<%= producto.image %>"
+            alt="producto-librearia"
+        /></a>
+        <p><%= producto.nombre %></p>
+        <p><%= producto.precio %></p>
+        <button>Agregar al Carrito</button>
+      </article>
+      <% }) %>
+    </section>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>
