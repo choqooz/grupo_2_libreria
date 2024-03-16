@@ -78,7 +78,6 @@
 }
 
 .main_popular_products img {
-  border: solid 1px;
   width: 230px;
 }
 
@@ -130,9 +129,19 @@
     margin: 7px auto;
   }
   button {
-    padding: 6px;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     margin-bottom: 10px;
   }
+
+  button:hover {
+    background-color: #ddd;
+  }
+
   @media screen and (max-width: 1200px) {
     article {
       flex: 1 0 calc(33.33% - 20px); /* Ajustar para 3 artículos por fila */
@@ -168,7 +177,6 @@
 
 .form_reg {
   padding: 10px;
-  border: 1px solid hsl(0deg 0% 50%);
   display: flex;
   align-items: flex-end;
   text-align: center;
@@ -185,11 +193,10 @@
   justify-content: center;
   text-align: center;
   flex-flow: column wrap;
-  width: 60%;
   margin: 10px auto;
   gap: 8px;
   .input {
-    width: 25%;
+    width: 15%;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -203,6 +210,16 @@
       margin-top: 5px;
     }
   }
+  .pass {
+    input {
+      margin-left: 21px;
+    }
+  }
+}
+
+.far {
+  position: relative;
+  left: 4px;
 }
 
 .input {
@@ -211,6 +228,8 @@
   height: 2.5rem;
   margin-top: 4px;
   text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .name,
@@ -276,16 +295,12 @@
 }
 
 .images-detail-product {
-  border: 1px solid black;
-  border-radius: 8px;
   margin: 10px 15px;
-  width: 40%;
+  width: 30%;
   text-align: center;
 
   img {
     width: 60%;
-    border: 1px solid #cccccc00;
-    border-radius: 8px;
     margin: 10px;
   }
 }
@@ -300,8 +315,7 @@
 .info-detail-product {
   width: 50%;
   margin: 10px 15px;
-  border: 1px solid black;
-  border-radius: 8px;
+
   padding: 1em;
   .info-detail-product-title {
     text-align: center;
@@ -312,7 +326,6 @@
     margin: 30px auto;
   }
   .links {
-    border: 1px solid black;
     padding: 10px 0;
     padding-left: 10px;
   }
@@ -352,19 +365,6 @@
     width: 100%;
     margin: 10px 0;
     text-align: center;
-  }
-
-  .info-detail-product-title,
-  .info-detail-product-subtitle,
-  .info-detail-product-price,
-  .info-detail-product-stock,
-  input,
-  button {
-    margin: 10px auto; /* Ajustado el margen para centrar elementos en pantallas pequeñas */
-  }
-
-  input {
-    width: 50%;
   }
 }
 
