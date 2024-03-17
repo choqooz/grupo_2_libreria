@@ -115,8 +115,10 @@ header {
   margin-left: 7px;
 }
 .header__search input{
-  width: 250px;
-
+  width: 280px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
 }
 @media (min-width: 360px) {
   .header__search {
