@@ -82,7 +82,7 @@ header {
 #search__bar {
   width: 100%;
   max-width: 350px;
-  border: rgb(255, 255, 255) solid 1px;
+  border: white (255, 255, 255) solid 1px;
   border-radius: 5px;
   padding: 5px;
   text-align: center;
@@ -114,7 +114,10 @@ header {
   font-size: 20px;
   margin-left: 7px;
 }
+.header__search input{
+  width: 250px;
 
+}
 @media (min-width: 360px) {
   .header__search {
     /*border: red dotted 1px;*/

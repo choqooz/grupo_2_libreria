@@ -13,7 +13,7 @@ const controller = {
     let results = products.filter(product => {
 			return product.nombre.toUpperCase().includes(productSearch)
 		})
-    res.render("search.ejs", {results, pageTitle: "Página de Incio"})
+    res.render("search.ejs", {results, productSearch, pageTitle: "Búsqueda"})
 }}
 
 module.exports = controller;

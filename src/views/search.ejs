@@ -4,7 +4,7 @@
 
   <body>
     <%- include('partials/header.ejs') %>
-    <h3 class="products-title">PRODUCTOS</h3>
+    <h3 class="products-title">Resultado de la Búsqueda: <%= productSearch %></h3>
     <section class="main_producto">
       <% results.forEach((producto) => { %>
       <article>
@@ -18,6 +18,10 @@
         <button>Agregar al Carrito</button>
       </article>
       <% }) %>
+      <% if (results == 0) { %>
+        
+        <h4 class= "products-title" style="color: rgb(2, 41, 41);text-decoration:underline">No hay productos que coincidan con la búsqueda</h4>
+      <% } %>
     </section>
 
     <%- include('partials/footer.ejs') %>
