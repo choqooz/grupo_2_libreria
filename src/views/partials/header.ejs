@@ -9,11 +9,15 @@
     <section class="header__search">
       <div class="header__search__search">
         <form action="/search" method="get">
-          <input type="search" name="search" placeholder="Buscar productos, marcas y más...">
-          <button type="submit">
+          <input
+            type="search"
+            name="search"
+            placeholder="Buscar productos, marcas y más..."
+          />
+          <button type="submit" class="search-button">
             <i class="fas fa-search"></i>
           </button>
-      </form>
+        </form>
       </div>
 
       <section class="header__search__links">
@@ -31,8 +35,7 @@
       <img
         src="/images/users/<%= locals.userLogged.avatar %>"
         alt="User Avatar"
-        width="40"
-        height="40"
+        class="user-profile-mini"
       />
       <p>Hola <%= locals.userLogged.name %> <%= locals.userLogged.surname %></p>
       <a href="/users/profile">Profile</a>
