@@ -125,8 +125,8 @@
       <label for="category-field" class="category">
         Categoría
         <select class="input" name="category" id="category-field">
-          <option value="admin">Admin</option>
-          <option value="cliente">Cliente</option>
+          <option value="1">Admin</option>
+          <option value="0">Cliente</option>
         </select>
         <% if (locals.errors && errors.category) { %>
         <p class="error-message"><%= errors.category.msg %></p>

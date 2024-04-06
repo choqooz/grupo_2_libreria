@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
+const db = require("../../database/models");
+const sequelize = db.sequelize;
 
 //Middlewares
 const { validationResult } = require("express-validator");
@@ -13,8 +15,12 @@ const controller = {
   login: (req, res) => {
     res.render("login.ejs", { pageTitle: "Login" });
   },
-  processLogin: (req, res) => {
-    let userToLogin = User.findByField("email", req.body.email);
+  processLogin: async (req, res) => {
+    let userToLogin = await db.User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
 
     if (userToLogin) {
       let isOkThePassword = bcrypt.compareSync(
@@ -49,7 +55,7 @@ const controller = {
   register: (req, res) => {
     res.render("register.ejs", { pageTitle: "Formulario de Registro" });
   },
-  processRegister: (req, res) => {
+  processRegister: async (req, res) => {
     const errors = validationResult(req);
 
     if (errors.errors.length > 0) {
@@ -60,7 +66,11 @@ const controller = {
       });
     }
 
-    let userInDB = User.findByField("email", req.body.email);
+    let userInDB = await db.User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
 
     if (userInDB) {
       return res.render("register.ejs", {
@@ -72,11 +82,13 @@ const controller = {
 
     let newUser = {
       ...req.body,
+      information: 1,
+      terms: 1,
       password: bcrypt.hashSync(req.body.password, 10),
       avatar: req.file.filename,
     };
 
-    User.create(newUser);
+    await db.User.create(newUser);
     return res.render("login.ejs", { pageTitle: "Formulario de Registro" });
   },
   profile: (req, res) => {
@@ -89,6 +101,36 @@ const controller = {
     res.clearCookie("email");
     req.session.destroy();
     res.redirect("/");
+  },
+
+  userDetail: (req, res) => {
+    db.User.findByPk(req.params.id).then((user) => {
+      res.json(user);
+    });
+  },
+  userEdit: async (req, res) => {
+    let userId = req.params.id;
+    let updatedUser = {
+      name: req.body.name,
+      surname: req.body.surname,
+      email: req.body.email,
+      date: req.body.date,
+      prefix: req.body.prefix,
+      phone: req.body.phone,
+      password: bcrypt.hashSync(req.body.password, 10),
+    };
+
+    console.log(req.body);
+
+    await db.User.update(updatedUser, {
+      where: { user_id: userId },
+    })
+      .then(() => {
+        return res.json(updatedUser);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   },
 };
 

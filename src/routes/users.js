@@ -22,4 +22,11 @@ router.post(
 router.get("/profile/", authMiddleware, usersController.profile);
 router.get("/logout", usersController.logout);
 
+//CRUD
+
+//Get / List
+router.get("/detail/:id", usersController.userDetail);
+// //Edit
+router.put("/edit/:id", usersController.userEdit);
+
 module.exports = router;
