@@ -31,12 +31,20 @@
     </section>
 
     <section class="header__buy">
-      <% if (locals.isLogged) { %>
+      <% if (locals.isLogged) { %> <% if (locals.userLogged.avatar) { %>
       <img
         src="/images/users/<%= locals.userLogged.avatar %>"
-        alt="User Avatar"
+        alt="User Image"
         class="user-profile-mini"
       />
+      <% } else { %>
+      <!-- Si no hay imagen de usuario, usar una por defecto -->
+      <img
+        src="/images/users/default-avatar.jpg"
+        alt="Default Image"
+        class="user-profile-mini"
+      />
+      <% } %>
       <p>Hola <%= locals.userLogged.name %> <%= locals.userLogged.surname %></p>
       <a href="/users/profile">Profile</a>
       <a href="/users/logout">Logout</a>

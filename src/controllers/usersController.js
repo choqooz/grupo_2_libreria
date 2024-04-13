@@ -8,8 +8,6 @@ const sequelize = db.sequelize;
 //Middlewares
 const { validationResult } = require("express-validator");
 
-// const productsFilePath = path.join(__dirname, "../data/users.json");
-// const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const controller = {
   login: (req, res) => {

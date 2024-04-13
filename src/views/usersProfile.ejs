@@ -7,17 +7,11 @@
     <h1 class="user-profile-title">User Profile</h1>
 
     <div class="perfil">
-      <% if (user.avatar && user.avatar.type === 'Buffer' &&
-      Array.isArray(user.avatar.data)) { %>
-      <!-- Convierte los bytes en una URL base64 -->
-      <% var base64Data = Buffer.from(user.avatar.data).toString('base64'); %>
-      <% var imageSrc = "data:image/jpeg;base64," + base64Data; %>
-      <!-- Muestra la imagen -->
-      <img src="<%= imageSrc %>" alt="Imagen de usuario" />
+      <% if (user.avatar ) { %>
+      <img src="/images/users/<%= user.avatar %>" alt="Imagen de usuario" />
       <% } else { %>
-      <!-- Si no hay avatar, muestra una imagen por defecto -->
       <img
-        src="/images/default-avatar.jpg"
+        src="/images/users/default-avatar.jpg"
         alt="Imagen de usuario por defecto"
       />
       <% } %>
