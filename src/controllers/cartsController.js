@@ -9,6 +9,7 @@ const Carts = db.Cart;
 const cartsController = {
   list: (req, res) => {
     Carts.findAll({
+    
       include: ["user"],
     }).then((carts) => {
       res.json(carts);
