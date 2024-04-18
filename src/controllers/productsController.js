@@ -1,15 +1,19 @@
 const fs = require("fs");
 const path = require("path");
-
-const productsFilePath = path.join(__dirname, "../data/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
+const db = require("../../database/models");
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+//const productsFilePath = path.join(__dirname, "../data/products.json");
+//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const Products = db.Product
 const controller = {
-  list: (req, res) => {
+  list: async(req, res) => {
+    const products= await Products.findAll()
+    console.log(products);
     res.render("products.ejs", { pageTitle: "Listado de Productos", products });
   },
-  productDetail: (req, res) => {
-    let product = products.find((product) => product.id == req.params.id);
+  productDetail: async(req, res) => {
+    let product = await Products.findByPk(req.params.id);
     res.render("productDetail.ejs", {
       pageTitle: "Detalle de Productos",
       product,
@@ -23,8 +27,8 @@ const controller = {
       pageTitle: "Creacion de Productos",
     });
   },
-  editProduct: (req, res) => {
-    let product = products.find((product) => product.id == req.params.id);
+  editProduct: async(req, res) => {
+    let product = await Products.findByPk(req.params.id);
     if (product) {
       return res.render("product-edit-form.ejs", {
         pageTitle: "Editar un producto",

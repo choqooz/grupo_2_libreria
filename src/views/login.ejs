@@ -3,39 +3,42 @@
   <%- include('partials/head.ejs') %>
   <body>
     <%- include('partials/header.ejs') %>
-    <form class="form_log" action="/users/login" method="POST">
-      <h2>Accedé a tu cuenta</h2>
-      <div class="users">
-        <label for="email">Ingresar Email</label> <br />
-        <input
-          type="text"
-          name="email"
-          id="email"
-          class="<%= locals.errors && errors.email ? 'input-error' : null %>"
-          value="<%= locals.old ? old.email : null %>"
-        />
-        <% if (locals.errors && errors.email) { %>
-        <p class="error-message"><%= errors.email.msg %></p>
-        <% } %>
-      </div>
-      <div class="pass">
-        <label for="password">Ingresar Contraseña</label>
-        <div>
-          <input type="text" name="password" id="password" />
-          <i class="far fa-eye"></i>
+    <div class="div-login">
+      <img class="logo_reg" src="/images/logo_libreria.png" alt="Logo Empresa" />
+      <form class="form_reg" action="/users/login" method="POST">
+        <div class="datos_pers">Accede a tu Cuenta</div>
+        <div class="users">
+          <label for
+          ="email">Ingresar Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="<%= locals.errors && errors.email ? 'input-error' : null %>"
+            value="<%= locals.old ? old.email : null %>"
+          />
+          <% if (locals.errors && errors.email) { %>
+          <p class="error-message"><%= errors.email.msg %></p>
+          <% } %>
         </div>
-      </div>
-      <div class="remember_me">
-        <label for="remember_me"
-          >Recordar usuario
-          <input type="checkbox" name="remember_me" id="remember_me" />
-        </label>
-      </div>
-      <div class="botones">
-        <input class="input" type="submit" value="Ingresar" / > <input
-        class="input" type="reset" value="Borrar Datos" / >
-      </div>
-    </form>
+        <div class="pass">
+          <label for="password">Ingresar Contraseña</label>
+          <div>
+            <input type="text" name="password" id="password" /><i
+              class="far fa-eye"
+            ></i>
+          </div>
+          <label for="remember_me"
+            >Recordar usuario
+            <input type="checkbox" name="remember_me" id="remember_me" />
+          </label>
+        </div>
+        <div class="botones">
+          <input class="input" type="submit" value="Ingresar" / > <input
+          class="input" type="reset" value="Borrar Datos" / >
+        </div>
+      </form>
+    </div>
     <%- include('partials/footer.ejs') %>
   </body>
 </html>
