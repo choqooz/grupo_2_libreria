@@ -8,11 +8,24 @@
     <section class="main_producto">
       <% products.forEach((producto) => { %>
       <article>
-        <a href="/products/<%= producto.id %>">
+        <% if (`/images/products/${producto.image}`) { %>
+        <!-- Verifica si hay una imagen almacenada localmente -->
+        <a href="/products/<%= producto.product_id %>">
           <img
             src="/images/products/<%= producto.image %>"
             alt="producto-librearia"
-        /></a>
+          />
+        </a>
+        <% } else { %>
+        <!-- Si no hay una imagen almacenada localmente, muestra una imagen predeterminada o un texto alternativo -->
+        <p>No hay imagen disponible</p>
+        <% } %> <% if (producto.image) { %>
+        <!-- Verifica si hay una URL externa para la imagen -->
+        <a href="/products/<%= producto.product_id %>">
+          <img src="<%= producto.image %>" alt="producto-librearia" />
+        </a>
+        <% } %>
+
         <p><%= producto.name %></p>
         <p><%= producto.price %></p>
         <button>Agregar al Carrito</button>

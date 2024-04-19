@@ -91,13 +91,13 @@
           <p class="info-detail-product-stock">Disponibles:</p>
 
           <div class="botones-edit-delete">
-            <a href="/products/<%= product.id %>/edit"
+            <a href="/products/<%= product.product_id %>/edit"
               ><button type="submit" class="action-button edit">
                 EDITAR PRODUCTO
               </button></a
             >
             <form
-              action="/products/<%= product.id %>?_method=DELETE"
+              action="/products/<%= product.product_id %>?_method=DELETE"
               method="POST"
             >
               <button type="submit" class="action-button delete">

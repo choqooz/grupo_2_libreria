@@ -6,6 +6,7 @@ const cartsController = require("../controllers/cartsController");
 router.get("/", cartsController.list);
 router.get("/detail/:id", cartsController.detail);
 router.post("/create", cartsController.create);
+router.get("/update/:id", cartsController.edit);
 router.put("/update/:id", cartsController.update);
 router.delete("/delete/:id", cartsController.destroy);
 

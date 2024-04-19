@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs') %>
+
+  <body>
+    <div class="cart-table-container">
+      <h2>Carrito de Compras</h2>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>user_id</th>
+            <th>product_id</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% carts.forEach(cart => { %>
+          <tr>
+            <td><%= cart.cart_id %></td>
+            <td><%= cart.quantity %></td>
+            <td><%= cart.subtotal %></td>
+            <td><%= cart.user_id %></td>
+            <td><%= cart.product_id %></td>
+            <td>
+              <form action="/carts/update/<%= cart.cart_id %>" method="GET">
+                <button type="submit">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+              </form>
+            </td>
+            <td>
+              <form
+                action="/carts/delete/<%= cart.cart_id %>?_method=DELETE"
+                method="POST"
+              >
+                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

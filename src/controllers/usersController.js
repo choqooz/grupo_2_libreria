@@ -118,8 +118,6 @@ const controller = {
       password: bcrypt.hashSync(req.body.password, 10),
     };
 
-    console.log(req.body);
-
     await db.User.update(updatedUser, {
       where: { user_id: userId },
     })

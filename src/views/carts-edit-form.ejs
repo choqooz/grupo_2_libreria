@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Elemento del Carrito</title>
+    <link rel="stylesheet" href="/css/index_styles.css" />
+  </head>
+  <body>
+    <div class="edit-cart-form-container">
+      <h2>Editar Elemento del Carrito</h2>
+      <form
+        action="/carts/update/<%= cart.cart_id %>?_method=PUT"
+        method="POST"
+      >
+        <div class="form-group">
+          <label for="quantity">Cantidad:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            value="<%= cart.quantity %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="subtotal">Subtotal:</label>
+          <input
+            type="text"
+            id="subtotal"
+            name="subtotal"
+            value="<%= cart.subtotal %>"
+          />
+        </div>
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </div>
+  </body>
+</html>
