@@ -31,13 +31,13 @@ const controller = {
         })
       })  
 
-.then(function(product) {
-    res.redirect('/productos');
+/*.then(function() {
+    res.redirect('/products');
 })
 .catch(function(err) {
     console.error('Error al crear el producto:', err);
     res.status(500).send('Error interno del servidor');
-})
+})*/
  },
  guardado: function(req,res){
   db.Product.create({
