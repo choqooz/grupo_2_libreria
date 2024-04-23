@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const { Association } = require("sequelize");
 const db = require("../../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { name } = require("ejs");
 //const productsFilePath = path.join(__dirname, "../data/products.json");
 //const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const Products = db.Product;
@@ -21,11 +23,33 @@ const controller = {
   getCart: (req, res) => {
     res.render("productCart.ejs", { pageTitle: "Carrrito de Compra" });
   },
-  createProduct: (req, res) => {
-    res.render("product-create-form.ejs", {
-      pageTitle: "Creacion de Productos",
-    });
-  },
+  createProduct: function (req, res) {
+    db.Product.findAll()
+      .then(function(products){
+        return res.render("product-create-form.ejs", {
+          pageTitle: "Creacion de Productos",
+        })
+      })  
+
+.then(function(product) {
+    res.redirect('/productos');
+})
+.catch(function(err) {
+    console.error('Error al crear el producto:', err);
+    res.status(500).send('Error interno del servidor');
+})
+ },
+ guardado: function(req,res){
+  db.Product.create({
+      name: req.body.nombre,
+      description: req.body.descripcion,
+      image:req.body.image,
+      category:req.body.categoria,
+      color:req.body.color,
+      price: req.body.precio
+  });
+  res.redirect("/products")
+},
   editProduct: async (req, res) => {
     let product = await Products.findByPk(req.params.id);
     if (product) {
@@ -114,8 +138,10 @@ const controller = {
         res.redirect(`/products/`);
       })
       .catch((err) => {
+        return res.redirect(`/products/`);
         console.error("Error al crear el producto: \n", err);
-        res.status(500).send("Error al crear el producto");
+        
+
       });
   },
   deleteProduct: (req, res) => {

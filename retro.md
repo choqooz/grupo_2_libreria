@@ -25,9 +25,3 @@ Entregable: sección funcional con listado, detalle, alta, modificación y baja 
 
 <
 
-<input
-        type="text"
-        id="categoria"
-        name="categoria"
-        value="<%= product.category
-      />

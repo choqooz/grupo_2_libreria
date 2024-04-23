@@ -3,6 +3,7 @@ module.exports = (sequelize, dataTypes) => {
   let cols = {
     product_id: {
       type: dataTypes.BIGINT(10).UNSIGNED,
+      autoIncrement: true,
       primaryKey: true,
       autoIncrement: true,
     },

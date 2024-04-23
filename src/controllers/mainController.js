@@ -2,9 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const db = require("../../database/models");
 const sequelize = db.sequelize;
-
-const productsFilePath = path.join(__dirname, "../data/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+//const productsFilePath = path.join(__dirname, "../data/products.json");
+//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const controller = {
   index: (req, res) => {
@@ -17,11 +16,19 @@ const controller = {
     });
     res.render("search.ejs", { results, productSearch, pageTitle: "Búsqueda" });
   },
-  listar: (req, res) => {
+  /*listar: (req, res) => {
     db.Product.findAll().then((carts) => {
       res.json(carts);
     });
-  },
+  },*/
+  listar: function(req,res){
+    db.Pelicula.findAll()
+        .then(function(productos){
+            res.render("products", {productos:productos})
+        })
+},
 };
+db.sequelize = sequelize;
+
 
 module.exports = controller;
