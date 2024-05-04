@@ -8,7 +8,6 @@ const sequelize = db.sequelize;
 //Middlewares
 const { validationResult } = require("express-validator");
 
-
 const controller = {
   login: (req, res) => {
     res.render("login.ejs", { pageTitle: "Login" });
@@ -37,15 +36,18 @@ const controller = {
         return res.redirect("/users/profile");
       }
 
-      return res.render("login.ejs", {
-        errors: { email: { msg: "Credenciales invalidas" } },
-        old: req.body,
-        pageTitle: "Formulario de Login",
-      });
+      // return res.render("login.ejs", {
+      //   errors: { email: { msg: "Credenciales invalidas" } },
+      //   old: req.body,
+      //   pageTitle: "Formulario de Login",
+      // });
     }
 
     return res.render("login.ejs", {
-      errors: { email: { msg: "Credenciales invalido" } },
+      errors: {
+        email: { msg: "Credenciales invalidas" },
+        password: { msg: "Credenciales invalidas" },
+      },
       old: req.body,
       pageTitle: "Formulario de Login",
     });

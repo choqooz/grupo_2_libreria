@@ -4,12 +4,15 @@
   <body>
     <%- include('partials/header.ejs') %>
     <div class="div-login">
-      <img class="logo_reg" src="/images/logo_libreria.png" alt="Logo Empresa" />
-      <form class="form_reg" action="/users/login" method="POST">
+      <img
+        class="logo_reg"
+        src="/images/logo_libreria.png"
+        alt="Logo Empresa"
+      />
+      <form class="form_reg" action="/users/login" method="POST" id="form">
         <div class="datos_pers">Accede a tu Cuenta</div>
         <div class="users">
-          <label for
-          ="email">Ingresar Email</label>
+          <label for="email">Ingresar Email</label>
           <input
             type="text"
             name="email"
@@ -23,11 +26,18 @@
         </div>
         <div class="pass">
           <label for="password">Ingresar Contraseña</label>
-          <div>
-            <input type="text" name="password" id="password" /><i
-              class="far fa-eye"
-            ></i>
-          </div>
+
+          <input
+            type="text"
+            name="password"
+            id="password"
+            class="<%= locals.errors && errors.password ? 'input-error' : null %>"
+            value="<%= locals.old ? old.password : null %>"
+          />
+          <% if (locals.errors && errors.password) { %>
+          <p class="error-message"><%= errors.password.msg %></p>
+          <% } %>
+
           <label for="remember_me"
             >Recordar usuario
             <input type="checkbox" name="remember_me" id="remember_me" />
@@ -42,6 +52,3 @@
     <%- include('partials/footer.ejs') %>
   </body>
 </html>
-
-<!--  <button type="submit">Enviar</button>
-<button type="reset">Cancelar</button>  -->

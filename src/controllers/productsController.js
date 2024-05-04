@@ -5,8 +5,14 @@ const db = require("../../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const { name } = require("ejs");
+
+
 //const productsFilePath = path.join(__dirname, "../data/products.json");
 //const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+//Middlewares
+const { validationResult } = require("express-validator");
+
 const Products = db.Product;
 const controller = {
   list: async (req, res) => {
@@ -24,32 +30,31 @@ const controller = {
     res.render("productCart.ejs", { pageTitle: "Carrrito de Compra" });
   },
   createProduct: function (req, res) {
-    db.Product.findAll()
-      .then(function(products){
-        return res.render("product-create-form.ejs", {
-          pageTitle: "Creacion de Productos",
-        })
-      })  
+    db.Product.findAll().then(function (products) {
+      return res.render("product-create-form.ejs", {
+        pageTitle: "Creacion de Productos",
+      });
+    });
 
-/*.then(function() {
+    /*.then(function() {
     res.redirect('/products');
 })
 .catch(function(err) {
     console.error('Error al crear el producto:', err);
     res.status(500).send('Error interno del servidor');
 })*/
- },
- guardado: function(req,res){
-  db.Product.create({
-      name: req.body.nombre,
-      description: req.body.descripcion,
-      image:req.body.image,
-      category:req.body.categoria,
-      color:req.body.color,
-      price: req.body.precio
-  });
-  res.redirect("/products")
-},
+  },
+  // guardado: function (req, res) {
+  //   db.Product.create({
+  //     name: req.body.nombre,
+  //     description: req.body.descripcion,
+  //     image: req.body.image,
+  //     category: req.body.categoria,
+  //     color: req.body.color,
+  //     price: req.body.precio,
+  //   });
+  //   res.redirect("/products");
+  // },
   editProduct: async (req, res) => {
     let product = await Products.findByPk(req.params.id);
     if (product) {
@@ -123,6 +128,16 @@ const controller = {
   },
 
   storeProduct: async (req, res) => {
+    const errors = validationResult(req);
+
+    if (errors.errors.length > 0) {
+      return res.render("product-create-form.ejs", {
+        errors: errors.mapped(),
+        old: req.body,
+        pageTitle: "Creacion de Productos",
+      });
+    }
+
     const newProduct = {
       id: Date.now(),
       name: req.body.nombre,
@@ -138,10 +153,8 @@ const controller = {
         res.redirect(`/products/`);
       })
       .catch((err) => {
-        return res.redirect(`/products/`);
-        console.error("Error al crear el producto: \n", err);
-        
-
+        res.redirect(`/products/`);
+        return console.error("Error al crear el producto: \n", err);
       });
   },
   deleteProduct: (req, res) => {

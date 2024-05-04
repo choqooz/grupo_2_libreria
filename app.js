@@ -34,6 +34,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(express.static(rute));
+app.use(
+  express.static("public", {
+    setHeaders: function (res, path) {
+      if (path.match(/\.js$/)) {
+        res.set("Content-Type", "application/javascript; charset=utf-8");
+      }
+    },
+  })
+);
 
 app.use("/", mainRouter);
 app.use("/products", productsRouter);

@@ -5,24 +5,75 @@
   <body>
     <%- include('partials/header.ejs') %>
 
-    <form action="/products/" method="POST" class="container" enctype="multipart/form-data">
+    <form
+      action="/products/"
+      method="POST"
+      class="container"
+      enctype="multipart/form-data"
+    >
       <label for="nombre">Nombre del producto:</label>
       <input
         type="text"
         id="nombre"
         name="nombre"
         placeholder="Ej: Carpeta Husares"
+        class="<%= locals.errors && errors.nombre ? 'input-error' : null %>"
+        value="<%= locals.old ? old.nombre : null %>"
       />
+      <% if (locals.errors && errors.nombre) { %>
+      <p class="error-message"><%= errors.nombre.msg %></p>
+      <% } %>
+
       <label for="descripcion">Descripcion:</label>
-      <input type="text" id="descripcion" name="descripcion" />
+      <input
+        type="text"
+        id="descripcion"
+        name="descripcion"
+        class="<%= locals.errors && errors.descripcion ? 'input-error' : null %>"
+        value="<%= locals.old ? old.descripcion : null %>"
+      />
+      <% if (locals.errors && errors.descripcion) { %>
+      <p class="error-message"><%= errors.descripcion.msg %></p>
+      <% } %>
       <label for="image">Imagen:</label>
       <input type="file" id="image" name="image" />
+      <% if (locals.errors && errors.image) { %>
+      <p class="error-message"><%= errors.image.msg %></p>
+      <% } %>
       <label for="categoria">Categoria:</label>
-      <input type="text" id="categoria" name="categoria" />
+      <input
+        type="text"
+        id="categoria"
+        name="categoria"
+        class="<%= locals.errors && errors.categoria ? 'input-error' : null %>"
+        value="<%= locals.old ? old.categoria : null %>"
+      />
+      <% if (locals.errors && errors.categoria) { %>
+      <p class="error-message"><%= errors.categoria.msg %></p>
+      <% } %>
       <label for="color">Color:</label>
-      <input type="text" id="color" name="color" />
+      <input
+        type="text"
+        id="color"
+        name="color"
+        class="<%= locals.errors && errors.color ? 'input-error' : null %>"
+        value="<%= locals.old ? old.color : null %>"
+      />
+      <% if (locals.errors && errors.color) { %>
+      <p class="error-message"><%= errors.color.msg %></p>
+      <% } %>
       <label for="precio">Precio:</label>
-      <input type="number" id="precio" name="precio" />
+      <input
+        type="number"
+        step="0.01"
+        id="precio"
+        name="precio"
+        class="<%= locals.errors && errors.precio ? 'input-error' : null %>"
+        value="<%= locals.old ? old.precio : null %>"
+      />
+      <% if (locals.errors && errors.precio) { %>
+      <p class="error-message"><%= errors.precio.msg %></p>
+      <% } %>
       <div class="botones">
         <input class="input" type="submit" value="Guardar Datos" / > <input
         class="input" type="reset" value="Borrar Datos" / >
