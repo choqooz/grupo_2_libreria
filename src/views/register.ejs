@@ -11,6 +11,7 @@
       action="/users/register"
       method="POST"
       enctype="multipart/form-data"
+      id="form-reg"
     >
       <label for="name-field" class="name">
         Nombres
@@ -153,5 +154,6 @@
     </form>
 
     <%- include('partials/footer.ejs') %>
+    <script type="text/javascript" src="/utils/validatorRegister.js"></script>
   </body>
 </html>
