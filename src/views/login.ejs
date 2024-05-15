@@ -17,10 +17,10 @@
             type="text"
             name="email"
             id="email"
-            class="<%= locals.errors && errors.email ? 'input-error' : null %>"
+            class="<%= locals.errors?.email ? 'input-error' : null %>"
             value="<%= locals.old ? old.email : null %>"
           />
-          <% if (locals.errors && errors.email) { %>
+          <% if (locals.errors?.email) { %>
           <p class="error-message"><%= errors.email.msg %></p>
           <% } %>
         </div>
