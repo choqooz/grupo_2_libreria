@@ -170,14 +170,14 @@
 
 /* REGISTRO */
 .logo_reg {
-  width: 200px;
+  width: 150px;
   display: block;
-  padding-top: 35px;
+  padding-top: 10px;
   margin: 20px auto;
 }
 
 .form_reg {
-  padding: 10px;
+  padding: 5px;
   display: flex;
   align-items: flex-end;
   text-align: center;
@@ -209,11 +209,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       margin-top: 5px;
-    }
-  }
-  .pass {
-    input {
-      margin-left: 21px;
+      display: block;
     }
   }
 }
@@ -242,7 +238,7 @@
 .avatar,
 .category {
   flex-grow: 1;
-  flex-basis: 48%;
+  flex-basis: 49%;
 }
 
 /* ... Otros estilos ... */
@@ -579,7 +575,7 @@ h2 {
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 40px;
   background-color: #f7f7f7;
 }
 
@@ -627,4 +623,41 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los enlaces se ajusten en varias líneas si es necesario */
+  margin-top: 20px;
+}
+
+.pagination-link {
+  margin: 0 3px; /* Reduce el margen entre los enlaces */
+  padding: 5px 10px; /* Reduce el padding para hacer los enlaces más compactos */
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #333;
+  border-radius: 3px; /* Ajusta el borde para que sea más compacto */
+  min-width: 30px; /* Asegura un ancho mínimo para cada enlace */
+  text-align: center; /* Centra el texto en los enlaces */
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.pagination-link:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination-link.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .pagination-link {
+    padding: 5px;
+    margin: 2px;
+  }
 }

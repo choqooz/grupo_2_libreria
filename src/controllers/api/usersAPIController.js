@@ -32,17 +32,7 @@ const controller = {
   userDetail: async (req, res) => {
     try {
       let user = await Users.findByPk(req.params.id);
-      let modifiedUser = {
-        id: user.user_id,
-        name: user.name,
-        surname: user.surname,
-        email: user.email,
-        date: user.date,
-        prefix: user.prefix,
-        phone: user.phone,
-        avatar: user.avatar,
-      };
-      res.status(201).json({ message: "OK", status: 201, user: modifiedUser });
+      res.status(201).json({ message: "OK", status: 201, user: user });
     } catch (error) {
       res
         .status(500)

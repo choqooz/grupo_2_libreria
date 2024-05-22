@@ -1,4 +1,3 @@
-// const { Association } = require("sequelize");
 const db = require("../../../database/models");
 const sequelize = db.sequelize;
 
@@ -48,7 +47,7 @@ const controller = {
   productDetail: async (req, res) => {
     try {
       let product = await Products.findByPk(req.params.id);
-      res.status(201).json({ message: "OK", status: 201, product: product });
+      res.status(201).json({ message: "OK", status: 201, product });
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error", status: 500 });
     }

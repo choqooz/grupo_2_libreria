@@ -1,7 +1,5 @@
-const path = require("path");
 const db = require("../../database/models");
 const sequelize = db.sequelize;
-const { Op } = require("sequelize");
 
 //Aqui tienen otra forma de llamar a cada uno de los modelos
 const Carts = db.Cart;
@@ -11,7 +9,7 @@ const cartsController = {
     const carts = await Carts.findAll({
       include: ["user"],
     });
-    res.render("carts.ejs", { pageTitle: "Lista Carritos", carts });
+    res.render("carts.ejs", { carts });
   },
   detail: (req, res) => {
     Carts.findByPk(req.params.id, {

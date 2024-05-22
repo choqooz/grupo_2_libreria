@@ -11,10 +11,7 @@
         <% if (`/images/products/${producto.image}`) { %>
         <!-- Verifica si hay una imagen almacenada localmente -->
         <a href="/products/<%= producto.product_id %>">
-          <img
-            src="/images/products/<%= producto.image %>"
-            alt="producto-librearia"
-          />
+          <img src="/images/products/<%= producto.image %>" alt="" />
         </a>
         <% } else { %>
         <!-- Si no hay una imagen almacenada localmente, muestra una imagen predeterminada o un texto alternativo -->
@@ -22,7 +19,7 @@
         <% } %> <% if (producto.image) { %>
         <!-- Verifica si hay una URL externa para la imagen -->
         <a href="/products/<%= producto.product_id %>">
-          <img src="<%= producto.image %>" alt="producto-librearia" />
+          <img src="<%= producto.image %>" alt="" />
         </a>
         <% } %>
 
@@ -32,6 +29,28 @@
       </article>
       <% }) %>
     </section>
+
+    <div class="pagination">
+      <% if (currentPage > 1) { %>
+      <a
+        class="pagination-link"
+        href="/products?page=<%= currentPage - 1 %>&limit=<%= limit %>"
+        >Anterior</a
+      >
+      <% } %> <% for (let i = 1; i <= totalPages; i++) { %>
+      <a
+        class="pagination-link <%= currentPage === i ? 'active' : '' %>"
+        href="/products?page=<%= i %>&limit=<%= limit %>"
+        ><%= i %></a
+      >
+      <% } %> <% if (currentPage < totalPages) { %>
+      <a
+        class="pagination-link"
+        href="/products?page=<%= currentPage + 1 %>&limit=<%= limit %>"
+        >Siguiente</a
+      >
+      <% } %>
+    </div>
 
     <%- include('partials/footer.ejs') %>
   </body>

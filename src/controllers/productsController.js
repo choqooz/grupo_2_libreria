@@ -7,34 +7,46 @@ const { Op } = require("sequelize");
 const { name } = require("ejs");
 
 
-//const productsFilePath = path.join(__dirname, "../data/products.json");
-//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
 //Middlewares
 const { validationResult } = require("express-validator");
 
 const Products = db.Product;
 const controller = {
   list: async (req, res) => {
-    const products = await Products.findAll();
-    res.render("products.ejs", { pageTitle: "Listado de Productos", products });
+    const page = parseInt(req.query.page) || 1; // Página actual, por defecto 1
+    const limit = parseInt(req.query.limit) || 24; // Número de productos por página, por defecto 10
+    const offset = (page - 1) * limit;
+
+    try {
+      const { count, rows } = await Products.findAndCountAll({
+        limit: limit,
+        offset: offset,
+      });
+
+      const totalPages = Math.ceil(count / limit);
+
+      res.render("products", {
+        products: rows,
+        currentPage: page,
+        totalPages: totalPages,
+        limit: limit,
+      });
+    } catch (error) {
+      res.status(500).send("Error al obtener los productos");
+    }
+
+    // const products = await Products.findAll();
+    // res.render("products.ejs", { products });
   },
   productDetail: async (req, res) => {
     let product = await Products.findByPk(req.params.id);
-    res.render("productDetail.ejs", {
-      pageTitle: "Detalle de Productos",
-      product,
-    });
+    res.render("productDetail.ejs", { product });
   },
   getCart: (req, res) => {
-    res.render("productCart.ejs", { pageTitle: "Carrrito de Compra" });
+    res.render("productCart.ejs");
   },
   createProduct: function (req, res) {
-    db.Product.findAll().then(function (products) {
-      return res.render("product-create-form.ejs", {
-        pageTitle: "Creacion de Productos",
-      });
-    });
+    return res.render("product-create-form.ejs");
 
     /*.then(function() {
     res.redirect('/products');
@@ -58,10 +70,7 @@ const controller = {
   editProduct: async (req, res) => {
     let product = await Products.findByPk(req.params.id);
     if (product) {
-      return res.render("product-edit-form.ejs", {
-        pageTitle: "Editar un producto",
-        product,
-      });
+      return res.render("product-edit-form.ejs", { product });
     }
 
     res.send(`
@@ -134,7 +143,6 @@ const controller = {
       return res.render("product-create-form.ejs", {
         errors: errors.mapped(),
         old: req.body,
-        pageTitle: "Creacion de Productos",
       });
     }
 

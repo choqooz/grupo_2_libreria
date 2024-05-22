@@ -9,9 +9,11 @@ const usersRouter = require("./src/routes/users.js");
 const cartsRouter = require("./src/routes/carts.js");
 const productsAPIRouter = require("./src/routes/api/productsApi.routes.js");
 const usersAPIRouter = require("./src/routes/api/usersApi.routes.js");
+const cartsAPIRouter = require("./src/routes/api/cartsApi.routes.js");
 const session = require("express-session");
 const userLogged = require("./src/middlewares/userLoggedMiddleware.js");
 const cookies = require("cookie-parser");
+const cors = require("cors");
 
 const port = 3005;
 
@@ -25,6 +27,8 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+app.use(cors());
 
 app.use(cookies());
 
@@ -54,6 +58,7 @@ app.use("/carts", cartsRouter);
 //API
 app.use("/api/products", productsAPIRouter);
 app.use("/api/users", usersAPIRouter);
+app.use("/api/carts", cartsAPIRouter);
 
 app.listen(port, () => {
   console.log(`Nuestra app corre en http://localhost:${port}`);
