@@ -8,6 +8,7 @@ const controller = {
   list: async (req, res) => {
     try {
       const products = await Products.findAll();
+
       // Modificar la respuesta antes de enviarla
       const modifiedProducts = products.map((product) => {
         // Agregar el ID como un enlace al objeto del producto
@@ -16,6 +17,7 @@ const controller = {
           link: `http://localhost:3005/products/${product.product_id}`, // Crear un enlace con el ID del producto
         };
       });
+      const lastProduct = modifiedProducts.pop();
       const ficcion = modifiedProducts.filter((p) => p.category === "Ficción");
       const noFiccion = modifiedProducts.filter(
         (p) => p.category === "No Ficción"
@@ -39,6 +41,7 @@ const controller = {
         count: modifiedProducts.length,
         products: modifiedProducts,
         countByCategory: countByCategory,
+        lastProduct: lastProduct,
       });
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error", status: 500 });
