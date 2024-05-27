@@ -3,6 +3,10 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const cookies = require("cookie-parser");
+const cors = require("cors");
+const session = require("express-session");
+const userLogged = require("./src/middlewares/userLoggedMiddleware.js");
 const productsRouter = require("./src/routes/product.js");
 const mainRouter = require("./src/routes/main.js");
 const usersRouter = require("./src/routes/users.js");
@@ -10,10 +14,6 @@ const cartsRouter = require("./src/routes/carts.js");
 const productsAPIRouter = require("./src/routes/api/productsApi.routes.js");
 const usersAPIRouter = require("./src/routes/api/usersApi.routes.js");
 const cartsAPIRouter = require("./src/routes/api/cartsApi.routes.js");
-const session = require("express-session");
-const userLogged = require("./src/middlewares/userLoggedMiddleware.js");
-const cookies = require("cookie-parser");
-const cors = require("cors");
 
 const port = 3005;
 
@@ -29,7 +29,6 @@ app.use(
 );
 
 app.use(cors());
-
 app.use(cookies());
 
 app.use(userLogged);
