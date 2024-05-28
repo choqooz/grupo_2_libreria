@@ -4,7 +4,12 @@
 
   <body>
     <%- include('partials/header.ejs') %>
-    <h3 class="products-title">PRODUCTOS</h3>
+    <div class="product-title">
+      <h3>Productos</h3>
+      <a href="http://localhost:3005/products/create" class="button">
+        Crear Producto
+      </a>
+    </div>
     <section class="main_producto">
       <% products.forEach((producto) => { %>
       <article>
@@ -24,7 +29,7 @@
         <% } %>
 
         <p><%= producto.name %></p>
-        <p><%= producto.price %></p>
+        <p>$<%= producto.price %></p>
         <button>Agregar al Carrito</button>
       </article>
       <% }) %>
@@ -34,21 +39,21 @@
       <% if (currentPage > 1) { %>
       <a
         class="pagination-link"
-        href="/products?page=<%= currentPage - 1 %>&limit=<%= limit %>"
-        >Anterior</a
-      >
+        href="/products?page=<%= currentPage - 1 %>&limit=<%= limit %>">
+        Anterior
+      </a>
       <% } %> <% for (let i = 1; i <= totalPages; i++) { %>
       <a
         class="pagination-link <%= currentPage === i ? 'active' : '' %>"
-        href="/products?page=<%= i %>&limit=<%= limit %>"
-        ><%= i %></a
-      >
+        href="/products?page=<%= i %>&limit=<%= limit %>">
+        <%= i %>
+      </a>
       <% } %> <% if (currentPage < totalPages) { %>
       <a
         class="pagination-link"
-        href="/products?page=<%= currentPage + 1 %>&limit=<%= limit %>"
-        >Siguiente</a
-      >
+        href="/products?page=<%= currentPage + 1 %>&limit=<%= limit %>">
+        Siguiente
+      </a>
       <% } %>
     </div>
 

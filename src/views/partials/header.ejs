@@ -2,8 +2,8 @@
   <section class="header_navbar">
     <section class="header__logo">
       <a href="/">
-        <img src="/images/logo_libreria.png" alt="logo-Libreria"
-      /></a>
+        <img src="/images/logo_libreria.png" alt="logo-Libreria" />
+      </a>
     </section>
 
     <section class="header__search">
@@ -12,8 +12,7 @@
           <input
             type="search"
             name="search"
-            placeholder="Buscar productos, marcas y más..."
-          />
+            placeholder="Buscar productos, marcas y más..." />
           <button type="submit" class="search-button">
             <i class="fas fa-search"></i>
           </button>
@@ -36,15 +35,13 @@
       <img
         src="/images/users/<%= locals.userLogged.avatar %>"
         alt="User Image"
-        class="user-profile-mini"
-      />
+        class="user-profile-mini" />
       <% } else { %>
       <!-- Si no hay imagen de usuario, usar una por defecto -->
       <img
         src="/images/users/default-avatar.jpg"
         alt="Default Image"
-        class="user-profile-mini"
-      />
+        class="user-profile-mini" />
       <% } %>
       <p>Hola <%= locals.userLogged.name %> <%= locals.userLogged.surname %></p>
       <a href="/users/profile">Profile</a>

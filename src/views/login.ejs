@@ -13,8 +13,7 @@
           name="email"
           id="email"
           class="<%= locals.errors?.email ? 'input-error' : null %>"
-          value="<%= locals.old ? old.email : null %>"
-        />
+          value="<%= locals.old ? old.email : null %>" />
         <% if (locals.errors?.email) { %>
         <p class="error-message"><%= errors.email.msg %></p>
         <% } %>
@@ -22,18 +21,17 @@
       <div class="pass">
         <label for="password">Ingresar Contraseña</label>
         <input
-          type="text"
+          type="password"
           name="password"
           id="password"
           class="<%= locals.errors && errors.password ? 'input-error' : null %>"
-          value="<%= locals.old ? old.password : null %>"
-        />
+          value="<%= locals.old ? old.password : null %>" />
         <% if (locals.errors && errors.password) { %>
         <p class="error-message"><%= errors.password.msg %></p>
         <% } %>
 
-        <label for="remember_me"
-          >Recordar usuario
+        <label for="remember_me">
+          Recordar usuario
           <input type="checkbox" name="remember_me" id="remember_me" />
         </label>
       </div>

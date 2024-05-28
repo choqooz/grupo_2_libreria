@@ -10,8 +10,7 @@
       method="POST"
       class="container"
       enctype="multipart/form-data"
-      id="form-products"
-    >
+      id="form-products">
       <label for="nombre">Nombre del producto:</label>
       <input
         type="text"
@@ -19,8 +18,7 @@
         name="nombre"
         placeholder="Ej: Carpeta Husares"
         class="<%= locals.errors && errors.nombre ? 'input-error' : null %>"
-        value="<%= locals.old ? old.nombre : null %>"
-      />
+        value="<%= locals.old ? old.nombre : null %>" />
       <% if (locals.errors && errors.nombre) { %>
       <p class="error-message"><%= errors.nombre.msg %></p>
       <% } %>
@@ -31,8 +29,7 @@
         id="descripcion"
         name="descripcion"
         class="<%= locals.errors && errors.descripcion ? 'input-error' : null %>"
-        value="<%= locals.old ? old.descripcion : null %>"
-      />
+        value="<%= locals.old ? old.descripcion : null %>" />
       <% if (locals.errors && errors.descripcion) { %>
       <p class="error-message"><%= errors.descripcion.msg %></p>
       <% } %>
@@ -47,8 +44,7 @@
         id="categoria"
         name="categoria"
         class="<%= locals.errors && errors.categoria ? 'input-error' : null %>"
-        value="<%= locals.old ? old.categoria : null %>"
-      />
+        value="<%= locals.old ? old.categoria : null %>" />
       <% if (locals.errors && errors.categoria) { %>
       <p class="error-message"><%= errors.categoria.msg %></p>
       <% } %>
@@ -58,8 +54,7 @@
         id="color"
         name="color"
         class="<%= locals.errors && errors.color ? 'input-error' : null %>"
-        value="<%= locals.old ? old.color : null %>"
-      />
+        value="<%= locals.old ? old.color : null %>" />
       <% if (locals.errors && errors.color) { %>
       <p class="error-message"><%= errors.color.msg %></p>
       <% } %>
@@ -70,8 +65,7 @@
         id="precio"
         name="precio"
         class="<%= locals.errors && errors.precio ? 'input-error' : null %>"
-        value="<%= locals.old ? old.precio : null %>"
-      />
+        value="<%= locals.old ? old.precio : null %>" />
       <% if (locals.errors && errors.precio) { %>
       <p class="error-message"><%= errors.precio.msg %></p>
       <% } %>

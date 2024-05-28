@@ -11,18 +11,14 @@
       <h2>Editar Elemento del Producto</h2>
       <form
         action="/products/create/<%= products.product_id %>?_method=PUT"
-        method="POST"
-      >
-
-      
+        method="POST">
         <div class="form-group">
           <label for="name">Nombre:</label>
           <input
             type="text"
             id="name"
             name="name"
-            value="<%= product.name %>"
-          />
+            value="<%= product.name %>" />
         </div>
         <div class="form-group">
           <label for="description">Descripción:</label>
@@ -30,8 +26,7 @@
             type="text"
             id="description"
             name="description"
-            value="<%= product.description %>"
-          />
+            value="<%= product.description %>" />
         </div>
         <button type="submit">Guardar Cambios</button>
       </form>

@@ -4,23 +4,26 @@
 
   <body>
     <%- include('partials/header.ejs') %>
-    <h3 class="products-title">Resultado de la Búsqueda: <%= productSearch %></h3>
+    <h3 class="products-title" style="text-align: center; margin: 20px">
+      Resultado de la Búsqueda: <%= productSearch %>
+    </h3>
     <section class="main_producto">
       <% results.forEach((producto) => { %>
       <article>
-        <a href="/products/<%= producto.id %>">
-          <img
-            src="/images/products/<%= producto.image %>"
-            alt="producto-librearia"
-        /></a>
-        <p><%= producto.nombre %></p>
-        <p><%= producto.precio %></p>
+        <a href="/products/<%= producto.product_id %>">
+          <img src="<%= producto.image %>" />
+        </a>
+        <p><%= producto.name %></p>
+        <p>$<%= producto.price %></p>
         <button>Agregar al Carrito</button>
       </article>
-      <% }) %>
-      <% if (results == 0) { %>
-        
-        <h4 class= "products-title" style="color: rgb(2, 41, 41);text-decoration:underline">No hay productos que coincidan con la búsqueda</h4>
+      <% }) %> <% if (results == 0) { %>
+
+      <h4
+        class="products-title"
+        style="color: rgb(2, 41, 41); text-decoration: underline">
+        No hay productos que coincidan con la búsqueda
+      </h4>
       <% } %>
     </section>
 
