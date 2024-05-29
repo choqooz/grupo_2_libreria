@@ -218,7 +218,6 @@
   margin: 10px auto;
   gap: 8px;
   .input {
-    width: 15%;
     border: 1px solid #ccc;
     border-radius: 5px;
   }

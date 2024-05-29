@@ -3,12 +3,11 @@ const sequelize = db.sequelize;
 
 const controller = {
   index: (req, res) => {
-    res.render("index.ejs", { pageTitle: "Página de Incio" });
+    res.render("index.ejs");
   },
   search: async (req, res) => {
     let products = await db.Product.findAll({ raw: true });
     let productSearch = req.query.search.toUpperCase();
-    console.log(products);
     let results = products.filter((product) => {
       return product.name.toUpperCase().includes(productSearch);
     });
